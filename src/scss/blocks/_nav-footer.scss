@@ -1,0 +1,117 @@
+.nav-footer {
+    display: flex;
+    // @include clamp (column-gap, 30px, 80px, 320px, 1440px);
+    // .nav-footer__column
+
+    @include sm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 16px;
+
+        @include sm {
+            gap: 0;
+        }
+
+        &._active {
+
+            .nav-footer__list {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                max-height: 300px;
+                padding: 15px 15px;
+            }
+
+            svg {
+                transform: rotate(180deg);
+
+                path {
+                    stroke: var(--accent-orange);
+                }
+            }
+
+            .nav-footer__title {
+                color: var(--accent-orange);
+            }
+        }
+    }
+
+    // .nav-footer__title
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-align: left;
+        font-weight: 700;
+        @include clamp (font-size, 18px, 24px, 320px, 1440px);
+        
+        color: var(--text-color-black);
+        transition: color 0.2s ease-in-out;
+
+        @media (hover:hover) {
+            &:hover {
+                color: var(--accent-orange);
+            }
+        }
+
+        svg {
+            display: none;
+            transition: all 0.3s ease-in-out;
+
+            path {
+                stroke: var(--bg-color-darkBlue);
+            }
+
+            @include sm {
+                display: flex;
+            }
+        }
+
+    }
+
+    // .nav-footer__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        transition: all 0.3s linear;
+
+        @include sm {
+            opacity: 0;
+            max-height: 0;
+            visibility: hidden;
+            pointer-events: none;
+            padding: 0 15px;
+            gap: 10px;
+            background-color: var(--bg-color-accent-orange);
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--text-color-lightFGray);
+
+        transition: color 0.3s ease-in-out;
+
+        @include sm {
+            color: var(--text-color-white);
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                color: var(--accent-orange);
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.slider-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &_white {
+        background-color: var(--bg-color-white);
+        box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+    }
+
+    @include md {
+        display: none;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--bg-color-accent-orange);
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media (hover:hover) {
+
+        &:hover {
+            svg {
+                stroke: white;
+            }
+
+            background-color: var(--bg-color-accent-orange);
+        }
+
+    }
+}

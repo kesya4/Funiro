@@ -1,0 +1,36 @@
+.header {
+	// position: absolute;
+	background-color: var(--bg-color-peach);
+	width: 100%;
+
+	&__wrapper {
+		width: 100%;
+		// position: fixed;
+		@include clamp (padding-top, 20px, 40px, 320px, 1440px);
+		@include clamp (padding-bottom, 20px, 40px, 320px, 1440px);
+	}
+
+	// .header__logo
+
+	&__logo {
+		z-index: 5;
+		@include clamp (margin-right, 25px, 41px, 768px, 991.98px)
+	}
+
+	// .header__search
+
+	&__search {
+		flex: 1 1 auto;
+		@include clamp (margin-right, 15px, 32px, 320px, 1440px);
+		z-index: 5;
+
+		@include lg {
+			flex: none;
+			margin-left: auto;
+		}
+	}
+
+	&__btn-open {
+		@include clamp (margin-left, 15px, 32px, 320px, 1440px);
+	}
+}

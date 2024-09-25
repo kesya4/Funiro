@@ -1,0 +1,29 @@
+.mobile-menu {
+    display: inline-flex;
+
+    &_btn-open {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 24px;
+        height: 24px;
+
+        @include md {
+            display: flex;
+        }
+
+        path {
+            stroke: var(--color-darkBlue);
+        }
+
+    }
+
+    &_btn-close {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

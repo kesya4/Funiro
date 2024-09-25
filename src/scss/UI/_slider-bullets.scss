@@ -1,0 +1,33 @@
+.swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include clamp (width, 22px, 27px, 320px, 1440px);
+    @include clamp (height, 22px, 27px, 320px, 1440px);
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    opacity: 1;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+
+    &::before {
+        content: '';
+        display: inline-flex;
+        background-color: #D8D8D8;
+        @include clamp (width, 9px, 11px, 320px, 1440px);
+        @include clamp (height, 9px, 11px, 320px, 1440px);
+        border-radius: 50%;
+        transition: all 0.2s ease-in-out;
+
+    }
+
+    &-active {
+        border-color: var(--bg-color-accent-orange);
+
+        &::before {
+            opacity: 1;
+            background-color: var(--bg-color-accent-orange);
+        }
+    }
+}

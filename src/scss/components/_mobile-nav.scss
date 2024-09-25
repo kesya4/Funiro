@@ -1,0 +1,251 @@
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+	overflow: auto;
+	padding-top: clamp(20px, 20px + 0.0178571429*(100vw - 320px), 40px);
+	padding-bottom: clamp(20px, 20px + 0.0178571429*(100vw - 320px), 40px);
+	background: var(--color-peach);
+	transition: left 0.5s ease-in-out;
+
+	&._active {
+		left: 0;
+	}
+
+	// .mobile-nav__header
+
+	&__header {
+		width: 100%;
+	}
+
+	// .mobile-nav__top
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 40px;
+	}
+
+	// .mobile-nav__logo
+
+	&__logo {}
+
+	// .mobile-nav__btn-close
+
+	&__btn-close {
+		display: inline-flex;
+
+		path {
+			fill: var(--bg-color-darkBlue);
+		}
+	}
+
+	// .mobile-nav__search
+
+	&__search {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 12px;
+		column-gap: 12px;
+		background: var(--bg-color-white);
+
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__input {
+		width: 100%;
+	}
+
+	// .mobile-nav__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+
+		@include clamp (row-gap, 15px, 20px, 320px, 767.98px);
+
+	}
+
+	// .mobile-nav__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		&._active {
+
+			.mobile-nav__sub-list {
+				opacity: 1;
+				visibility: visible;
+				max-height: 300px;
+				padding: 15px 15px;
+			}
+
+			.mobile-nav__arrow {
+				svg {
+					transform: rotate(180deg);
+				}
+
+				path {
+					stroke: var(--accent-orange);
+				}
+			}
+
+			.mobile-nav__link {
+				color: var(--accent-orange);
+			}
+		}
+	}
+
+	// .mobile-nav__link
+
+	&__link {
+		position: relative;
+		font-weight: 500;
+		@include clamp (font-size, 18px, 22px, 320px, 767.98px);
+		line-height: 150%;
+		color: var(--text-color-darkGray);
+		transition: color 0.3s ease;
+	}
+
+
+	&__arrow {
+		display: inline-flex;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		svg {
+			transition: transform 0.4s ease-in-out;
+		}
+
+		path {
+			stroke: var(--bg-color-darkBlue);
+		}
+	}
+
+	&__sub-list {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		gap: 10px;
+		padding: 0 15px;
+		transition: all 0.3s ease-in-out;
+		background-color: var(--bg-color-accent-orange);
+		opacity: 0;
+		overflow: hidden;
+		max-height: 0;
+	}
+
+	&__sub-link {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--text-color-white);
+	}
+
+	// .mobile-nav__footer
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		@include clamp (margin-top, 30px, 70px, 320px, 767.98px);
+
+		gap: 20px;
+	}
+
+	// .mobile-nav__footer-link
+
+	&__footer-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: clamp(18px, 18px + 0.00892897*(100vw - 320px), 22px);
+		font-weight: 500;
+		line-height: 150%;
+		color: var(--text-color-darkGray);
+
+		button {
+			display: flex;
+		}
+
+		path {
+			stroke: var(--bg-color-darkBlue);
+		}
+	}
+
+	// .mobile-nav__cart
+
+	&__cart {}
+
+	// .mobile-nav__wishlist
+
+	&__wishlist {}
+
+	// .mobile-nav__btn
+
+	&__btn {
+		margin: 0 auto;
+		font-size: clamp(18px, 18px + 0.00892897*(100vw - 320px), 22px);
+		width: 100%;
+		padding: 12px 0;
+	}
+
+	// .mobile-nav__contacts
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+		@include clamp (margin-top, 15px, 30px, 320px, 767.98px);
+		font-weight: 400;
+		font-size: 16px;
+
+		// line-height: 24px; 
+		line-height: 150%;
+		color: beige;
+	}
+
+	&__contact {
+		display: flex;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--text-color-darkGray);
+		gap: 5px;
+
+		&_location {
+			path {
+				fill: var(--bg-color-darkBlue);
+			}
+		}
+
+		// .mobile-nav__facebook
+
+		&_phone {
+			path {
+				fill: var(--bg-color-darkBlue);
+			}
+		}
+	}
+
+	// .mobile-nav__instagram
+
+
+}

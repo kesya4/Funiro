@@ -1,0 +1,43 @@
+.card-info {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    background: var(--bg-color-darkWhite);
+
+    // .card-info__title
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    // .card-info__desc
+
+    &__desc {
+        color: var(--text-color-gray);
+    }
+
+    // .card-info__price
+
+    &__price {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 150%;
+        color: var(--text-color-darkGray);
+
+        &_old {
+            font-size: 16px;
+            color: var(--text-color-gray);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            text-decoration: line-through var(--bg-color-gray);
+            margin-left: 14px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.actions {
+    display: flex;
+    align-items: center;
+    @include clamp (column-gap, 15px, 32px, 320px, 1440px);
+    z-index: 5;
+
+
+    // .actions__favorite
+
+    &__favorite {
+        display: flex;
+        @include clamp (width, 20px, 24px, 320px, 1440px);
+
+        path {
+            stroke: var(--color-darkBlue);
+            transition: stroke 0.3s ease;
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                path {
+                    stroke: var(--accent-orange);
+                }
+            }
+        }
+
+        @media (hover:none) {
+            &:active {
+                path {
+                    stroke: var(--accent-orange);
+                }
+            }
+        }
+    }
+
+    // .actions__cart
+
+    &__cart {
+        display: flex;
+        @include clamp (width, 20px, 24px, 320px, 1440px);
+    }
+
+    // .actions__avatar
+
+    &__avatar {
+        display: flex;
+        @include clamp (width, 35px, 40px, 320px, 1440px);
+    }
+}

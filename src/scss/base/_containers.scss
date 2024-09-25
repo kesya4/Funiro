@@ -1,0 +1,52 @@
+/* Контейнер */
+.container {
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+	max-width: calc(var(--container-width) + 2 * var(--container-padding));
+	width: 100%;
+}
+
+.container-full {
+	padding: 0 var(--container-padding);
+	max-width: 100%;
+}
+
+.container-left-50 {
+	padding: 0 var(--container-padding);
+	max-width: 50%;
+
+
+}
+
+.container-right-50 {
+	padding: 0 var(--container-padding);
+	max-width: 50%;
+	margin-left: auto;
+
+
+}
+
+.container-right {
+	padding-left: calc((100% - var(--container-width)) / 2);
+
+	@include xl {
+		padding-left: var(--container-padding);
+	}
+}
+
+.container-left {
+	padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+
+}
+
+.container-half-left {
+	padding-right: calc((100% - var(--container-width)) / 2 + (var(--container-width) / 2));
+	padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+.container-half-right {
+	padding-left: calc((100% - var(--container-width)) / 2 + (var(--container-width) / 2));
+	padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+}

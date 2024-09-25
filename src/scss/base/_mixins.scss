@@ -1,0 +1,53 @@
+// Adaptive properties clamp
+@mixin clamp ($property, $min-value, $max-value, $min-width: 320px, $max-width: 1440px) {
+    $min-value: calc($min-value / 1px);
+    $max-value: calc($max-value / 1px);
+
+    $min-width: calc($min-width / 1px);
+    $max-width: calc($max-width / 1px);
+
+    $slope: calc(($max-value - $min-value) / ($max-width - $min-width));
+
+#{$property}: clamp(#{$min-value}px,
+    #{$min-value}px + #{$slope} * (100vw - #{$min-width}px),
+    #{$max-value}px);
+}
+
+
+
+// Breakpoints
+@mixin xxl () {
+    @media (max-width: 1439.89px) {
+        @content;
+    }
+}
+
+@mixin xl () {
+    @media (max-width: 1199.9px) {
+        @content;
+    }
+}
+
+@mixin lg () {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin md () {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin sm () {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+
+@mixin x-sm () {
+    @media (max-width: 479.98px) {
+        @content;
+    }
+}

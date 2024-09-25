@@ -1,0 +1,37 @@
+<div data-id="@@id" class="card-product">
+    <div class="card-product__bage">
+        @@if (bageNew) {
+        <div class="card-product__bage_new">New</div>
+        } @@if (bageDiscount) {
+        <div class="card-product__bage_discount">@@bageDiscount</div>
+        }
+    </div>
+    <a class="card-product__img" href="#!">
+        <img src="../../img/prodact-card-@@img.jpg" alt="Product image" />
+    </a>
+    <div class="card-product__info card-info">
+        <h4 class="card-info__title">@@title</h4>
+        <p class="card-info__desc text-md">@@description</p>
+        <div class="card-info__price">
+            @@price
+            <span class="card-info__price_old">@@priceOld</span>
+        </div>
+    </div>
+    <div class="card-product__actions">
+        <button class="card-product__btn btn">Add to cart</button>
+        <div class="card-product__links">
+            <a href="#!" class="card-product__link card-product__link_share">
+                <svg>
+                    <use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
+                </svg>
+                Share
+            </a>
+            <a href="#!" class="card-product__link card-product__link_favorite">
+                <svg>
+                    <use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
+                </svg>
+                Like
+            </a>
+        </div>
+    </div>
+</div>

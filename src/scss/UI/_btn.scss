@@ -1,0 +1,32 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    line-height: 150%;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+        transition: all 0.3s ease-in-out;
+    }
+
+    &_orange {
+        color: var(--text-color-white);
+        background-color: var(--bg-color-accent-orange);
+        border: 2px solid transparent;
+
+
+
+        @media (hover:hover) {
+            &:hover {
+                color: var(--text-color-accentOrange);
+                background-color: transparent;
+                border: 2px solid var(--bg-color-accent-orange);
+
+                svg {
+                    fill: var(--bg-color-accent-orange);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+:root {
+	--container-width: 1240px;
+	--container-padding: 20px;
+
+	// Fonts
+	--font-main: "Gilroy", sans-serif;
+	// --font-secondary: "", sans-serif;
+
+
+	// Colors
+	--color-black: #000000;
+	--color-white: #fff;
+	--color-darkWhite: #F4F5F7;
+	--color-gray: #898989;
+	--color-lightFGray: #616161;
+	--color-darkGray: #3A3A3A;
+	--accent-orange: #E89F71;
+	--color-peach: #FCF8F3;
+	--color-darkBlue: #262F56;
+	--color-red: #E97171;
+	--color-green: #2EC1AC;
+
+	// Functional Colors
+	--text-color-white: var(--color-white);
+	--text-color-black: var(--color-black);
+	--text-color-gray: var(--color-gray);
+	--text-color-lightFGray: var(--color-lightFGray);
+	--text-color-darkGray: var(--color-darkGray);
+	--text-color-accentOrange: var(--accent-orange);
+
+	--bg-color-white: var(--color-white);
+	--bg-color-black: var(--color-black);
+	--bg-color-darkWhite: var(--color-darkWhite);
+	--bg-color-gray: var(--color-gray);
+	--bg-color-darkGray: var(--color-darkGray);
+	--bg-color-lightFGray: var(--color-lightFGray);
+	--bg-color-peach: var(--color-peach);
+	--bg-color-darkBlue: var(--color-darkBlue);
+	--bg-color-accent-orange: var(--accent-orange);
+	--bg-color-red: var(--color-red);
+	--bg-color-green: var(--color-green);
+}

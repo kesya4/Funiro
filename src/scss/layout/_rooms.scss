@@ -1,0 +1,169 @@
+.rooms {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include clamp (gap, 30px, 70px, 992px, 1440px);
+
+    // .rooms__content
+
+    &__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        max-width: 378px;
+        width: 100%;
+    }
+
+    // .rooms__title
+
+    &__title {
+        margin: 0;
+    }
+
+    // .rooms__description
+
+    &__description {
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    // .rooms__btn
+
+    &__btn {
+        padding: 12px 40px;
+        font-size: 16px;
+        width: max-content;
+    }
+
+    // .rooms__slider
+
+    &__slider {
+        @include clamp (height, 450px, 582px, 992px, 1440px);
+
+    }
+}
+
+
+.rooms-slider {
+    min-width: 0;
+    // overflow: visible !important;
+    // .rooms-slider__slides
+
+    &__slides {}
+
+    // .rooms-slider__slide
+
+    &__slide {
+        position: relative;
+        @include clamp (max-width, 345px, 445px, 992px, 1440px);
+
+        height: 83% !important;
+
+        &.swiper-slide-active {
+            height: 100% !important;
+
+            .rooms-slider__img {
+                @include clamp (height, 450px, 582px, 992px, 1440px);
+            }
+        }
+    }
+
+    // .rooms-slider__img
+
+    &__img {
+        transition: all 0.5s ease-out;
+        transition-delay: 0.2s;
+
+        @include clamp (height, 375px, 486px, 992px, 1440px);
+
+    }
+
+    // .rooms-slider__content
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        @include clamp (left, 20px, 24px, 992px, 1440px);
+        @include clamp (top, 324px, 428px, 992px, 1440px);
+        // transition: all 0.3s ease-in-out;
+    }
+
+    // .rooms-slider__info
+
+    &__info {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        @include clamp (padding, 22px, 32px, 992px, 1440px);
+        max-width: 217px;
+        width: 100%;
+    }
+
+    // .rooms-slider__name
+
+    &__name {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include clamp (gap, 4px, 8px, 992px, 1440px);
+        color: var(--text-color-lightFGray);
+
+        span {
+            @include clamp (width, 20px, 27px, 992px, 1440px);
+            
+            height: 1px;
+            background-color: var(--bg-color-lightFGray);
+        }
+    }
+
+    // .rooms-slider__title
+
+    &__title {
+        color: var(--text-color-darkGray);
+        @include clamp (font-size, 20px, 24px, 992px, 1440px);
+        
+    }
+
+    // .rooms-slider__btn
+
+    &__btn {
+        padding: 12px;
+        height: max-content;
+
+        svg {
+            fill: var(--bg-color-white);
+        }
+    }
+
+    // .rooms-slider__arrows
+
+    &__arrows {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 5;
+    }
+
+    // .rooms-slider__arrow
+
+    &__arrow {
+
+        // .rooms-slider__arrow_next
+
+        &_next {}
+    }
+
+    // .rooms-slider__dots
+
+    &__dots {
+        width: max-content !important;
+        display: flex;
+        position: absolute;
+        gap: 8px;
+        // left: unset !important;
+        bottom: 29px !important;
+
+        &.swiper-pagination-bullets.swiper-pagination-bullets.swiper-pagination-horizontal {
+            @include clamp (left, 370px, 469px, 992px, 1440px);
+        }
+    }
+}

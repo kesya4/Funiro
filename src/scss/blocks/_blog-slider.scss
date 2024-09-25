@@ -1,0 +1,114 @@
+.blog-slider {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    margin: 0 -32px !important;
+    padding: 0 32px !important;
+    // .blog-slider__slides
+
+    &__slides {
+        position: relative;
+        display: flex;
+        align-items: start;
+        // gap: 32px;
+    }
+
+    // .blog-slider__slide
+
+    &__slide {
+        display: flex !important;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out !important;
+
+        @media (hover:hover) {
+
+            &:hover {
+                box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+            }
+        }
+    }
+
+
+
+    // .blog-slider__img
+
+    &__img {
+        max-width: auto;
+    }
+
+    // .blog-slider__info
+
+    &__info {
+        background-color: var(--bg-color-white) !important;
+        padding: 16px;
+    }
+
+    // .blog-slider__title
+
+    &__title {}
+
+    // .blog-slider__date
+
+    &__date {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 21px */
+    }
+
+    // .blog-slider__arrows
+
+    &__arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        width: 100%;
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%);
+
+        z-index: 1;
+    }
+
+    // .blog-slider__arrow
+
+    &__arrow {
+        background-color: var(--bg-color-white);
+        box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+        // .blog-slider__arrow_prev
+        pointer-events: all;
+
+        @include xxl () {
+            margin: 10px;
+        }
+
+        &_prev {
+            svg {
+                transform: rotate(180deg);
+            }
+
+            transform: translateX(25%);
+        }
+
+        // .blog-slider__arrow_next
+
+        &_next {
+            transform: translateX(-25%);
+        }
+    }
+
+    // .blog-slider__dots
+
+    &__dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        @include clamp (margin-top, 10px, 44px, 320px, 1440px);
+    }
+}

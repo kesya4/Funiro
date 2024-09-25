@@ -1,0 +1,15 @@
+.blog {
+
+    // .blog__title
+
+    &__title {
+        text-align: center;
+    }
+
+    // .blog__slider
+
+    &__slider {
+        @include clamp (margin-top, 20px, 32px, 320px, 1440px);
+        @include clamp (margin-bottom, 10px, 32px, 320px, 1440px) ;
+    }
+}
