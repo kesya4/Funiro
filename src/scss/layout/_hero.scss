@@ -2,6 +2,10 @@
     position: relative;
     background-color: var(--bg-color-peach);
 
+    @include lg {
+        padding-bottom: 44px;
+    }
+
     &::before {
         content: '';
         position: absolute;

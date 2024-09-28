@@ -23,8 +23,9 @@
     &__price {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-
+        column-gap: 14px;
         font-size: 20px;
         font-weight: 600;
         line-height: 150%;
@@ -37,7 +38,6 @@
             font-weight: 400;
             line-height: 150%;
             text-decoration: line-through var(--bg-color-gray);
-            margin-left: 14px;
         }
     }
 }

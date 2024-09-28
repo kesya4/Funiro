@@ -17,7 +17,13 @@
 
 // Breakpoints
 @mixin xxl () {
-    @media (max-width: 1439.89px) {
+    @media (max-width: 1439.98px) {
+        @content;
+    }
+}
+
+@mixin min-xxl () {
+    @media (min-width: 1440px) {
         @content;
     }
 }
@@ -34,8 +40,21 @@
     }
 }
 
+@mixin min-lg () {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+
 @mixin md () {
     @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin min-md () {
+    @media (min-width: 768px) {
         @content;
     }
 }

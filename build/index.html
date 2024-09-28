@@ -375,7 +375,7 @@
 									<p class="card-info__desc text-md">Stylish cafe chair</p>
 									<div class="card-info__price">
 										Rp&#160;2.500.000
-										<span class="card-info__price_old">Rp&#160;3.500.000</span>
+										<div class="card-info__price_old">Rp&#160;3.500.000</div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -408,7 +408,7 @@
 									<p class="card-info__desc text-md">Stylish cafe chair</p>
 									<div class="card-info__price">
 										Rp&#160;2.500.000
-										<span class="card-info__price_old"></span>
+										<div class="card-info__price_old"></div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -441,7 +441,7 @@
 									<p class="card-info__desc text-md">Luxury big sofar</p>
 									<div class="card-info__price">
 										Rp&#160;7.000.000
-										<span class="card-info__price_old">Rp&#160;14.000.000</span>
+										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -474,7 +474,7 @@
 									<p class="card-info__desc text-md">Minimalist fan</p>
 									<div class="card-info__price">
 										Rp&#160;500.000
-										<span class="card-info__price_old"></span>
+										<div class="card-info__price_old"></div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -505,7 +505,7 @@
 									<p class="card-info__desc text-md">Night lamp</p>
 									<div class="card-info__price">
 										Rp&#160;1.500.000
-										<span class="card-info__price_old"></span>
+										<div class="card-info__price_old"></div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -538,7 +538,7 @@
 									<p class="card-info__desc text-md">Small mug</p>
 									<div class="card-info__price">
 										Rp&#160;150.000
-										<span class="card-info__price_old"></span>
+										<div class="card-info__price_old"></div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -571,7 +571,7 @@
 									<p class="card-info__desc text-md">Cute bed set</p>
 									<div class="card-info__price">
 										Rp&#160;7.000.000
-										<span class="card-info__price_old">Rp&#160;14.000.000</span>
+										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -604,7 +604,7 @@
 									<p class="card-info__desc text-md">Minimalist flower pot</p>
 									<div class="card-info__price">
 										Rp&#160;500.000
-										<span class="card-info__price_old">Rp&#160;14.000.000</span>
+										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
 								<div class="card-product__actions">
@@ -626,7 +626,7 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn products__btn-more">Show More</button>
+						<button type="button" class="btn products__btn-more" aria-label="Show more product cards">Show More</button>
 					</div>
 				</div>
 			</section>
@@ -639,7 +639,7 @@
 							<p class="text-md rooms__description">
 								Our designer already made a&#160;lot of&#160;beautiful prototipe of&#160;rooms that inspire you
 							</p>
-							<button class="btn btn_orange rooms__btn">Explore More</button>
+							<button class="btn btn_orange rooms__btn rooms__btn_top">Explore More</button>
 						</div>
 						<div class="rooms__slider rooms-slider swiper">
 							<div class="rooms-slider__slides swiper-wrapper">
@@ -701,6 +701,11 @@
 								</div>
 							</div>
 							<div class="rooms-slider__arrows">
+								<button type="button" class="slider-arrow slider-arrow_white rooms-slider__arrow rooms-slider__arrow_prev">
+									<svg>
+										<use href="./img/svgsprite/sprite.symbol.svg#slider-arrow-icon"></use>
+									</svg>
+								</button>
 								<button type="button" class="slider-arrow slider-arrow_white rooms-slider__arrow rooms-slider__arrow_next">
 									<svg>
 										<use href="./img/svgsprite/sprite.symbol.svg#slider-arrow-icon"></use>
@@ -709,6 +714,7 @@
 							</div>
 							<div class="rooms-slider__dots"></div>
 						</div>
+						<button class="btn btn_orange rooms__btn rooms__btn_bottom">Explore More</button>
 					</div>
 				</div>
 			</section>

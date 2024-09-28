@@ -61,7 +61,7 @@ export function initializeBlogSlider() {
 
         breakpoints: {
             768: {
-                spaceBetween: 25,
+                spaceBetween: 24,
                 slidesPerView: 2,
             },
             1200: {
@@ -81,6 +81,7 @@ export function initializeRoomsSlider() {
         observer: true,
         loop: true,
         slidesPerView: "auto",
+        initialSlide: 1,
         spaceBetween: 24,
         speed: 800,
         watchOverflow: true,
@@ -88,7 +89,7 @@ export function initializeRoomsSlider() {
 
         navigation: {
             nextEl: ".rooms-slider__arrow_next",
-            // prevEl: ".rooms-slider__arrow_prev",
+            prevEl: ".rooms-slider__arrow_prev",
         },
 
         pagination: {
@@ -99,12 +100,14 @@ export function initializeRoomsSlider() {
         breakpoints: {
             // 768: {
             //     spaceBetween: 25,
-            //     slidesPerView: 2,
+            //     slidesPerView: "auto",
+            //     initialSlide: 2,
             // },
-            // 1200: {
-            //     spaceBetween: 32,
-            //     slidesPerView: 3,
-            // },
+            992: {
+                slidesPerView: "auto",
+                spaceBetween: 24,
+                initialSlide: 1,
+            },
         },
     });
 

@@ -13,7 +13,7 @@
     }
 
     @include md {
-        display: none;
+        display: none !important;
     }
 
     svg {

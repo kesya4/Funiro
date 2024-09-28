@@ -6,7 +6,7 @@
                 <p class="text-md rooms__description">
                     Our designer already made a lot of beautiful prototipe of rooms that inspire you
                 </p>
-                <button class="btn btn_orange rooms__btn">Explore More</button>
+                <button class="btn btn_orange rooms__btn rooms__btn_top">Explore More</button>
             </div>
             <div class="rooms__slider rooms-slider swiper">
                 <div class="rooms-slider__slides swiper-wrapper">
@@ -15,7 +15,6 @@
                         <div
                             class="rooms-slider__content"
                             data-swiper-parallax-opacity="0"
-                            
                             data-swiper-parallax-y="-50%"
                         >
                             <a href="#!" class="card-info rooms-slider__info">
@@ -87,6 +86,14 @@
                 <div class="rooms-slider__arrows">
                     <button
                         type="button"
+                        class="slider-arrow slider-arrow_white rooms-slider__arrow rooms-slider__arrow_prev"
+                    >
+                        <svg>
+                            <use href="./img/svgsprite/sprite.symbol.svg#slider-arrow-icon"></use>
+                        </svg>
+                    </button>
+                    <button
+                        type="button"
                         class="slider-arrow slider-arrow_white rooms-slider__arrow rooms-slider__arrow_next"
                     >
                         <svg>
@@ -96,6 +103,7 @@
                 </div>
                 <div class="rooms-slider__dots"></div>
             </div>
+            <button class="btn btn_orange rooms__btn rooms__btn_bottom">Explore More</button>
         </div>
     </div>
 </section>

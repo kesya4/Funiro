@@ -9,14 +9,21 @@
     // .products__cards
 
     &__cards {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        // justify-content: center;
-        @include clamp (gap, 15px, 32px, 320px, 1440px);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: auto;
 
+        @include clamp (gap, 15px, 40px, 320px, 1440px);
         @include clamp (margin-top, 20px, 32px, 320px, 1440px);
         @include clamp (margin-bottom, 20px, 32px, 320px, 1440px);
+
+        @include md {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        @include sm {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
     }
 
     // .products__card
