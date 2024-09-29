@@ -1,3 +1,7 @@
+import moveElement from "./modules/utils/moveElement.js";
+document.addEventListener("DOMContentLoaded", moveElement);
+window.addEventListener("resize", moveElement);
+
 import mobileNav from "./modules/mobile-nav.js";
 mobileNav();
 
