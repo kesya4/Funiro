@@ -99,105 +99,121 @@
 		</header>
 		<div class="mobile-nav">
 			<div class="container">
-				<div class="mobile-nav__header">
-					<div class="mobile-nav__top">
-						<a href="#!" class="logo mobile-nav__logo">Funiro.</a>
-						<button class="mobile-menu mobile-menu_btn-close mobile-nav__btn-close">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
-								/>
-							</svg>
-						</button>
+				<div class="mobile-nav__wrapper">
+					<div class="mobile-nav__header">
+						<div class="mobile-nav__top">
+							<a href="#!" class="logo mobile-nav__logo">Funiro.</a>
+							<button class="mobile-menu mobile-menu_btn-close mobile-nav__btn-close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+									/>
+								</svg>
+							</button>
+						</div>
+						<form class="mobile-nav__search">
+							<button><img src="./img/icons/search-icon.svg" alt="search" /></button>
+							<input type="text" class="mobile-nav__input" placeholder="Search for minimalist chair" />
+						</form>
+						<ul class="mobile-nav__list">
+							<li class="mobile-nav__item">
+								<a href="#!" class="mobile-nav__link">
+									Products
+									<button class="mobile-nav__arrow">
+										<svg id="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M15.8333 7.50012L10 13.3335L4.16668 7.50012"
+												stroke="#3A3A3A"
+												stroke-width="1.8"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</button>
+								</a>
+								<ul class="mobile-nav__sub-list">
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Chair</a></li>
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Sofa</a></li>
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Fan</a></li>
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Mug</a></li>
+								</ul>
+							</li>
+							<li class="mobile-nav__item">
+								<a href="#!" class="mobile-nav__link">
+									Rooms
+									<button class="mobile-nav__arrow">
+										<svg id="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M15.8333 7.50012L10 13.3335L4.16668 7.50012"
+												stroke="#3A3A3A"
+												stroke-width="1.8"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</button>
+								</a>
+								<ul class="mobile-nav__sub-list">
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Bed room</a></li>
+									<li class="mobile-nav__sub-item">
+										<a href="#!" class="mobile-nav__sub-link">Liver room</a>
+									</li>
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Hole</a></li>
+									<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Kitchen</a></li>
+								</ul>
+							</li>
+							<li class="mobile-nav__item"><a href="#!" class="mobile-nav__link">Inspirations</a></li>
+						</ul>
 					</div>
-					<form class="mobile-nav__search">
-						<button><img src="./img/icons/search-icon.svg" alt="search" /></button>
-						<input type="text" class="mobile-nav__input" placeholder="Search for minimalist chair" />
-					</form>
-					<ul class="mobile-nav__list">
-						<li class="mobile-nav__item">
-							<a href="#!" class="mobile-nav__link">
-								Products
-								<button class="mobile-nav__arrow">
-									<svg id="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M15.8333 7.50012L10 13.3335L4.16668 7.50012" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</button>
-							</a>
-							<ul class="mobile-nav__sub-list">
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Chair</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Sofa</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Fan</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Mug</a></li>
-							</ul>
-						</li>
-						<li class="mobile-nav__item">
-							<a href="#!" class="mobile-nav__link">
-								Rooms
-								<button class="mobile-nav__arrow">
-									<svg id="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M15.8333 7.50012L10 13.3335L4.16668 7.50012" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</button>
-							</a>
-							<ul class="mobile-nav__sub-list">
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Bed room</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Liver room</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Hole</a></li>
-								<li class="mobile-nav__sub-item"><a href="#!" class="mobile-nav__sub-link">Kitchen</a></li>
-							</ul>
-						</li>
-						<li class="mobile-nav__item"><a href="#!" class="mobile-nav__link">Inspirations</a></li>
-					</ul>
-				</div>
 
-				<div class="mobile-nav__footer">
-					<a href="#!" class="mobile-nav__footer-link">
-						Cart
-						<button class="counter mobile-nav__cart" href="#!">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M1 2.5H2.65424C3.13263 2.5 3.37183 2.5 3.56628 2.58674C3.73771 2.66321 3.88415 2.78638 3.98886 2.94217C4.10763 3.11888 4.14862 3.35454 4.23058 3.82585L4.6087 6M4.6087 6L5.49173 11.0774C5.67091 12.1077 5.7605 12.6228 6.02583 12.9939C6.25945 13.3207 6.58606 13.5695 6.96311 13.708C7.39133 13.8654 7.91176 13.815 8.95264 13.7143L18.614 12.7793C19.6298 12.681 20.1378 12.6318 20.5221 12.4033C20.8653 12.1993 21.1395 11.8972 21.3095 11.536C21.5 11.1314 21.5 10.6211 21.5 9.6005V9.6005C21.5 8.51582 21.5 7.97348 21.2922 7.55394C21.1068 7.17971 20.809 6.8729 20.4404 6.67654C20.0272 6.4564 19.4851 6.44036 18.4009 6.40826L4.6087 6Z"
-									stroke="#262F56"
-									stroke-width="1.8"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<circle cx="8.5" cy="19" r="2" stroke="#262F56" stroke-width="1.8" />
-								<circle cx="18" cy="19" r="2" stroke="#262F56" stroke-width="1.8" />
-							</svg>
-						</button>
-					</a>
-					<a href="#!" class="mobile-nav__footer-link">
-						Wishlist
-						<button class="counter mobile-nav__wishlist" href="#!">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M11.9996 21.0542C-8 10 5.99999 -1.99997 11.9996 5.58809C18 -1.99997 32 10 11.9996 21.0542Z" stroke="#262F56" stroke-width="1.8" />
-							</svg>
-						</button>
-					</a>
-					<a href="#!" class="btn mobile-nav__btn">Sign In</a>
-					<div class="mobile-nav__contacts">
-						<a class="mobile-nav__contact mobile-nav__contact_location" href="#!">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M10.974 18.5413C13.0898 17.0976 17.9167 13.3048 17.9167 8.74992C17.9167 4.37766 14.3723 0.833252 10 0.833252C5.62775 0.833252 2.08333 4.37766 2.08333 8.74992C2.08333 13.3048 6.91025 17.0976 9.02596 18.5413C9.61759 18.945 10.3824 18.945 10.974 18.5413ZM10 11.2499C11.3807 11.2499 12.5 10.1306 12.5 8.74992C12.5 7.36921 11.3807 6.24992 10 6.24992C8.61929 6.24992 7.5 7.36921 7.5 8.74992C7.5 10.1306 8.61929 11.2499 10 11.2499Z"
-								/>
-							</svg>
-							Sawojajar Malang, Indonesia
+					<div class="mobile-nav__footer">
+						<a href="#!" class="mobile-nav__footer-link">
+							Cart
+							<button class="counter mobile-nav__cart" href="#!">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M1 2.5H2.65424C3.13263 2.5 3.37183 2.5 3.56628 2.58674C3.73771 2.66321 3.88415 2.78638 3.98886 2.94217C4.10763 3.11888 4.14862 3.35454 4.23058 3.82585L4.6087 6M4.6087 6L5.49173 11.0774C5.67091 12.1077 5.7605 12.6228 6.02583 12.9939C6.25945 13.3207 6.58606 13.5695 6.96311 13.708C7.39133 13.8654 7.91176 13.815 8.95264 13.7143L18.614 12.7793C19.6298 12.681 20.1378 12.6318 20.5221 12.4033C20.8653 12.1993 21.1395 11.8972 21.3095 11.536C21.5 11.1314 21.5 10.6211 21.5 9.6005V9.6005C21.5 8.51582 21.5 7.97348 21.2922 7.55394C21.1068 7.17971 20.809 6.8729 20.4404 6.67654C20.0272 6.4564 19.4851 6.44036 18.4009 6.40826L4.6087 6Z"
+										stroke="#262F56"
+										stroke-width="1.8"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<circle cx="8.5" cy="19" r="2" stroke="#262F56" stroke-width="1.8" />
+									<circle cx="18" cy="19" r="2" stroke="#262F56" stroke-width="1.8" />
+								</svg>
+							</button>
 						</a>
-						<a href="tel:+62894563455" class="mobile-nav__contact mobile-nav__contact_phone">
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M13.4307 13.0668L12.9152 13.8401C12.8123 13.9944 12.6762 14.1261 12.4969 14.1735C11.9095 14.3287 10.3499 14.3988 7.9755 12.0244C5.60111 9.65004 5.67119 8.09046 5.82641 7.50302C5.8738 7.32368 6.00549 7.1876 6.15983 7.0847L6.93308 6.5692C7.50878 6.1854 7.66435 5.40757 7.28055 4.83187L5.82014 2.64126C5.48514 2.13876 4.83933 1.94678 4.28423 2.18468L3.62544 2.46702C3.12498 2.6815 2.71674 3.06643 2.47324 3.55343C2.2698 3.96031 2.11213 4.38877 2.09076 4.84317C2.02344 6.27515 2.33743 9.80312 6.26713 13.7328C10.1968 17.6625 13.7248 17.9765 15.1568 17.9092C15.6111 17.8878 16.0396 17.7301 16.4465 17.5267C16.9335 17.2832 17.3184 16.8749 17.5329 16.3745L17.8152 15.7157C18.0531 15.1606 17.8612 14.5148 17.3587 14.1798L15.168 12.7194C14.5923 12.3356 13.8145 12.4911 13.4307 13.0668Z"
-								/>
-							</svg>
-							+6289 456 3455
+						<a href="#!" class="mobile-nav__footer-link">
+							Wishlist
+							<button class="counter mobile-nav__wishlist" href="#!">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.9996 21.0542C-8 10 5.99999 -1.99997 11.9996 5.58809C18 -1.99997 32 10 11.9996 21.0542Z" stroke="#262F56" stroke-width="1.8" />
+								</svg>
+							</button>
 						</a>
+						<a href="#!" class="btn mobile-nav__btn">Sign In</a>
+						<div class="mobile-nav__contacts">
+							<a class="mobile-nav__contact mobile-nav__contact_location" href="#!">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M10.974 18.5413C13.0898 17.0976 17.9167 13.3048 17.9167 8.74992C17.9167 4.37766 14.3723 0.833252 10 0.833252C5.62775 0.833252 2.08333 4.37766 2.08333 8.74992C2.08333 13.3048 6.91025 17.0976 9.02596 18.5413C9.61759 18.945 10.3824 18.945 10.974 18.5413ZM10 11.2499C11.3807 11.2499 12.5 10.1306 12.5 8.74992C12.5 7.36921 11.3807 6.24992 10 6.24992C8.61929 6.24992 7.5 7.36921 7.5 8.74992C7.5 10.1306 8.61929 11.2499 10 11.2499Z"
+									/>
+								</svg>
+								Sawojajar Malang, Indonesia
+							</a>
+							<a href="tel:+62894563455" class="mobile-nav__contact mobile-nav__contact_phone">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M13.4307 13.0668L12.9152 13.8401C12.8123 13.9944 12.6762 14.1261 12.4969 14.1735C11.9095 14.3287 10.3499 14.3988 7.9755 12.0244C5.60111 9.65004 5.67119 8.09046 5.82641 7.50302C5.8738 7.32368 6.00549 7.1876 6.15983 7.0847L6.93308 6.5692C7.50878 6.1854 7.66435 5.40757 7.28055 4.83187L5.82014 2.64126C5.48514 2.13876 4.83933 1.94678 4.28423 2.18468L3.62544 2.46702C3.12498 2.6815 2.71674 3.06643 2.47324 3.55343C2.2698 3.96031 2.11213 4.38877 2.09076 4.84317C2.02344 6.27515 2.33743 9.80312 6.26713 13.7328C10.1968 17.6625 13.7248 17.9765 15.1568 17.9092C15.6111 17.8878 16.0396 17.7301 16.4465 17.5267C16.9335 17.2832 17.3184 16.8749 17.5329 16.3745L17.8152 15.7157C18.0531 15.1606 17.8612 14.5148 17.3587 14.1798L15.168 12.7194C14.5923 12.3356 13.8145 12.4911 13.4307 13.0668Z"
+									/>
+								</svg>
+								+6289 456 3455
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -322,7 +338,7 @@
 							</svg>
 							<div class="features__text">
 								<div class="features__title">High Quality</div>
-								<p class="features__subtitle text-md">crafted from top materials</p>
+								<p class="features__subtitle text-md">Crafted from top materials</p>
 							</div>
 						</div>
 						<div class="features__item">
@@ -349,7 +365,7 @@
 							</svg>
 							<div class="features__text">
 								<div class="features__title">24 / 7 Support</div>
-								<p class="features__subtitle text-md">Dedicated supportt</p>
+								<p class="features__subtitle text-md">Dedicated support</p>
 							</div>
 						</div>
 					</div>
