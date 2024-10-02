@@ -20,6 +20,17 @@
 		left: 0;
 	}
 
+	& .container {
+		height: 100%;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+	}
+
 	// .mobile-nav__header
 
 	&__header {
@@ -116,7 +127,7 @@
 	&__link {
 		position: relative;
 		font-weight: 500;
-		@include clamp (font-size, 18px, 22px, 320px, 767.98px);
+		@include clamp (font-size, 20px, 24px, 320px, 767.98px);
 		line-height: 150%;
 		color: var(--text-color-darkGray);
 		transition: color 0.3s ease;
@@ -154,7 +165,7 @@
 
 	&__sub-link {
 		font-weight: 500;
-		font-size: 16px;
+		@include clamp (font-size, 18px, 20px, 320px, 767.98px);
 		line-height: 150%;
 		color: var(--text-color-white);
 	}
@@ -184,7 +195,7 @@
 			display: flex;
 		}
 
-		path {
+		svg {
 			stroke: var(--bg-color-darkBlue);
 		}
 	}
@@ -230,22 +241,8 @@
 		color: var(--text-color-darkGray);
 		gap: 5px;
 
-		&_location {
-			path {
-				fill: var(--bg-color-darkBlue);
-			}
-		}
-
-		// .mobile-nav__facebook
-
-		&_phone {
-			path {
-				fill: var(--bg-color-darkBlue);
-			}
+		svg {
+			fill: var(--bg-color-darkBlue);
 		}
 	}
-
-	// .mobile-nav__instagram
-
-
 }

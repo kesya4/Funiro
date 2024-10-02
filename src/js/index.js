@@ -2,8 +2,11 @@ import moveElement from "./modules/utils/moveElement.js";
 document.addEventListener("DOMContentLoaded", moveElement);
 window.addEventListener("resize", moveElement);
 
-import mobileNav from "./modules/mobile-nav.js";
-mobileNav();
+import { initMobileNav, UpdateMobileNav } from "./modules/mobile-nav.js";
+document.addEventListener("DOMContentLoaded", initMobileNav);
+window.addEventListener("resize", UpdateMobileNav);
+
+
 
 import subList from "./modules/sub-list.js";
 subList();

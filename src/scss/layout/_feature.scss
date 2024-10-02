@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // @include clamp (column-gap, 20px, 92px, 1200px, 1440px);
     flex-wrap: wrap;
     // .features__item
 
@@ -12,8 +11,24 @@
     }
 
     @include md {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 255px);
+        justify-content: space-around;
+        row-gap: 35px;
         padding: 0;
     }
+
+    @include sm {
+        grid-template-columns: repeat(auto-fit, 210px);
+        row-gap: 25px;
+    }
+
+    @include x-sm {
+        row-gap: 20px;
+        grid-template-columns: repeat(1, auto);
+    }
+
+
 
     &__item {
         display: flex;
@@ -29,6 +44,23 @@
             width: 40px;
             height: 40px;
             fill: var(--bg-color-darkGray);
+        }
+
+        @include md {
+            min-width: max-content;
+            padding: 0;
+        }
+
+        @include sm {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+        @include x-sm {
+            flex-direction: row;
+            text-align: left;
+            gap: 20px;
         }
     }
 
