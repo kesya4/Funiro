@@ -64,7 +64,7 @@
     &__text {
         @include clamp (font-size, 18px, 20px, 320px, 1440px);
         @include clamp (margin-top, 12px, 16px, 320px, 1440px);
-        @include clamp (margin-bottom, 30px, 48px, 320px, 1440px);
+        @include clamp (margin-bottom, 30px, 48px, 992px, 1440px);
 
         @include lg {
             margin-bottom: 0px;
