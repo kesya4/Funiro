@@ -1,5 +1,5 @@
 function moveElement() {
-    const currentElements = document.querySelectorAll(".hero__btn");
+    const currentElements = document.querySelectorAll("[data-move]");
 
     currentElements.forEach((elem) => {
         const moveValue = elem.getAttribute("data-move");

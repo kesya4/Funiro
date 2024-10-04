@@ -148,6 +148,7 @@
         width: 100%;
 
         @include min-lg {
+            width: max-content;
             transition: all 0.5s ease-out;
             transition-delay: 0.2s;
             @include clamp (height, 375px, 486px, 992px, 1440px);
