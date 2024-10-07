@@ -1,0 +1,127 @@
+.share {
+    @include clamp (padding-bottom, 85px, 40px, 1440px, 320px);
+
+    // .share__label
+
+    &__label {
+        font-weight: 600;
+        @include clamp (font-size, 20px, 16px, 320px, 1440px);
+
+        line-height: 150%;
+        text-align: center;
+        color: var(--text-color-lightFGray);
+    }
+
+    // .share__title
+
+    &__title {
+        @include clamp (margin-top, 4px, 8px, 320px, 1440px);
+
+        text-align: center;
+    }
+
+    // .share__body
+
+    &__body {
+        position: relative;
+
+        @media (hover:none) {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+
+
+        }
+        scrollbar-color: var(--bg-color-accent-orange) #f1f1f1;
+    }
+
+    // .share__items
+
+    &__items {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 16px;
+
+
+        @media (hover:hover) {
+            justify-content: center;
+        }
+
+        @media (hover:none) {
+            padding-bottom: 15px;
+        }
+    }
+
+    // .share__column
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &:first-child {
+            justify-content: flex-end;
+        }
+    }
+
+    // .share__row
+
+    &__row {
+        display: inline-grid;
+        gap: 16px;
+        flex-wrap: wrap;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        // .share__row_left-top
+
+        &_left-top {
+            justify-content: flex-end;
+            align-items: end;
+        }
+
+        // .share__row_left-bottom
+
+        &_left-bottom {
+            justify-content: flex-end;
+            align-items: start;
+        }
+
+        // .share__row_center
+
+        &_center {
+            // display: block;
+        }
+
+        // .share__row_right-top
+
+        &_right-top {
+            justify-content: flex-start;
+            align-items: end;
+        }
+
+        // .share__row_right-bottom
+
+        &_right-bottom {
+            justify-content: flex-start;
+            align-items: start;
+        }
+    }
+
+    // .share__item
+
+    &__item {
+        width: max-content;
+
+        @media (hover:hover) {
+            img {
+                transition: all 0.3s ease-in-out;
+                filter: grayscale(1);
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}

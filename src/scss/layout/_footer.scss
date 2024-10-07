@@ -32,6 +32,11 @@
 
 		@include xl () {
 			grid-column: 1 / 3;
+
+			a:not(:first-child) {
+				display: none;
+			}
+
 		}
 
 		a:not(:first-child),
@@ -53,7 +58,7 @@
 				&:hover {
 					color: var(--accent-orange);
 
-					path {
+					svg {
 						fill: var(--accent-orange);
 					}
 				}
@@ -69,16 +74,34 @@
 
 	&__description {}
 
+	&__links {
+		display: none;
+
+		@include clamp (gap, 12px, 32px, 320px, 1440px);
+
+		@include xl {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
 	// .footer__location
 	// .footer__phone
 	&__location,
-	&__phone {
+	&__phone,
+	&__site {
 		display: flex;
 		align-items: center;
 		gap: 8px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--text-color-lightFGray);
 
-		path {
+		svg {
+			fill: var(--bg-color-gray);
 			transition: fill .2s ease-in-out;
 		}
+
 	}
 }

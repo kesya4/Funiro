@@ -14,7 +14,7 @@ subList();
 import search from "./modules/search.js";
 search();
 
-import footerNav from "./modules/footer-nav.js";
+import footerNav from "./modules/footer.js";
 footerNav();
 
 import prodactsShow from "./modules/products-show.js";
@@ -28,3 +28,6 @@ initializeBlogSlider();
 
 import { initializeRoomsSlider } from "./modules/utils/swiperSlider.js";
 initializeRoomsSlider();
+
+import shareScrollBar from "./modules/share-scrollbar.js";
+document.addEventListener("DOMContentLoaded", shareScrollBar);
