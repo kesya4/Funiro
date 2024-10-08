@@ -26,10 +26,13 @@
         position: relative;
         display: flex;
 
+        @media (hover:hover) {
+            justify-content: center;
+        }
+
         @media (hover:none) {
             overflow: auto;
             -webkit-overflow-scrolling: touch;
-
         }
 
         &::-webkit-scrollbar-thumb {
@@ -52,11 +55,6 @@
         grid-auto-flow: column;
         align-items: center;
         gap: 16px;
-
-
-        @media (hover:hover) {
-            justify-content: center;
-        }
 
         @media (hover:none) {
             padding-bottom: 15px;

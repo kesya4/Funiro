@@ -10,6 +10,7 @@
 
     @include lg {
         margin-top: 0;
+        overflow: hidden !important;
     }
 
 
@@ -109,7 +110,7 @@
 
     &__img {
         @include clamp (width, 280px, 934px, 320px, 1440px);
-
+        object-fit: cover;
         @include lg {
             width: 100%;
         }
