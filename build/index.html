@@ -18,6 +18,7 @@
 							<li class="nav__item">
 								<a href="#!" class="nav__link">Products</a>
 								<button type="button" class="nav__arrow">
+									<span class="visually-hidden">Open products submenu</span>
 									<svg id="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15.8333 7.50012L10 13.3335L4.16668 7.50012" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
@@ -32,6 +33,7 @@
 							<li class="nav__item">
 								<a href="#" class="nav__link">Rooms</a>
 								<button class="nav__arrow">
+									<span class="visually-hidden">Open rooms submenu</span>
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15.8333 7.50012L10 13.3335L4.16668 7.50012" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
@@ -86,7 +88,13 @@
 									<ul class="cart__list"></ul>
 								</div>
 							</div>
-							<a href="#" class="actions__avatar"><img src="./img/avatar.png" alt="Avatar" /> </a>
+							<a href="#" class="actions__avatar"
+								><picture>
+									<source srcset="./img/avatar.webp 1x, ./img/avatar_@2x.webp 2x, ./img/avatar_@3x.webp 3x" type="image/webp" />
+									<source srcset="./img/avatar.png 1x, ./img/avatar_@2x.png 2x, ./img/avatar_@3x.png 3x" type="image/png" />
+									<img src="./img/avatar.png" alt="Avatar" />
+								</picture>
+							</a>
 						</div>
 						<button class="header__btn-open mobile-menu mobile-menu_btn-open">
 							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -237,7 +245,11 @@
 							</div>
 							<div class="main-slider__slides swiper-wrapper">
 								<div class="main-slider__slide swiper-slide">
-									<img src="./img/main-slider-01.jpg" alt="Image" class="main-slider__img" />
+									<picture>
+										<source srcset="./img/main-slider-01.webp 1x, ./img/main-slider-01_@2x.webp 2x, ./img/main-slider-01_@3x.webp 3x" type="image/webp" />
+										<source srcset="./img/main-slider-01.jpg 1x, ./img/main-slider-01_@2x.jpg 2x, ./img/main-slider-01_@3x.jpg 3x" type="image/jpeg" />
+										<img src="./img/main-slider-01.jpg" alt="Image" class="main-slider__img" />
+									</picture>
 									<a href="#!" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#!" class="link-wrapper"></a>  -->
 										<h3 class="main-slider__title">Bohauss</h3>
@@ -256,7 +268,11 @@
 									</a>
 								</div>
 								<div class="main-slider__slide swiper-slide">
-									<img src="./img/main-slider-02.jpg" alt="Image" class="main-slider__img" />
+									<picture>
+										<source srcset="./img/main-slider-02.webp 1x, ./img/main-slider-02_@2x.webp 2x, ./img/main-slider-02_@3x.webp 3x" type="image/webp" />
+										<source srcset="./img/main-slider-02.jpg 1x, ./img/main-slider-02_@2x.jpg 2x, ./img/main-slider-02_@3x.jpg 3x" type="image/jpeg" />
+										<img src="./img/main-slider-02.jpg" alt="Image" class="main-slider__img" />
+									</picture>
 									<a href="#!" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#!" class="link-wrapper"></a>  -->
 										<h3 class="main-slider__title">Lolito</h3>
@@ -275,7 +291,11 @@
 									</a>
 								</div>
 								<div class="main-slider__slide swiper-slide">
-									<img src="./img/main-slider-03.jpg" alt="Image" class="main-slider__img" />
+									<picture>
+										<source srcset="./img/main-slider-03.webp 1x, ./img/main-slider-03_@2x.webp 2x, ./img/main-slider-03_@3x.webp 3x" type="image/webp" />
+										<source srcset="./img/main-slider-03.jpg 1x, ./img/main-slider-03_@2x.jpg 2x, ./img/main-slider-03_@3x.jpg 3x" type="image/jpeg" />
+										<img src="./img/main-slider-03.jpg" alt="Image" class="main-slider__img" />
+									</picture>
 									<a href="#!" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#!" class="link-wrapper"></a>  -->
 										<h3 class="main-slider__title">Pelino</h3>
@@ -294,7 +314,11 @@
 									</a>
 								</div>
 								<div class="main-slider__slide swiper-slide">
-									<img src="./img/main-slider-04.jpg" alt="Image" class="main-slider__img" />
+									<picture>
+										<source srcset="./img/main-slider-04.webp 1x, ./img/main-slider-04_@2x.webp 2x, ./img/main-slider-04_@3x.webp 3x" type="image/webp" />
+										<source srcset="./img/main-slider-04.jpg 1x, ./img/main-slider-04_@2x.jpg 2x, ./img/main-slider-04_@3x.jpg 3x" type="image/jpeg" />
+										<img src="./img/main-slider-04.jpg" alt="Image" class="main-slider__img" />
+									</picture>
 									<a href="#!" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#!" class="link-wrapper"></a>  -->
 										<h3 class="main-slider__title">Angagio</h3>
@@ -373,7 +397,17 @@
 									<div class="card-product__bage_discount">-30%</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-01.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-01.webp 1x, ./img/products/prodact-card-01_@2x.webp 2x, ./img/products/prodact-card-01_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-01.jpg 1x, ./img/products/prodact-card-01_@2x.jpg 2x, ./img/products/prodact-card-01_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-01.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Syltherine</h4>
@@ -406,7 +440,17 @@
 									<div class="card-product__bage_discount">-30%</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-02.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-02.webp 1x, ./img/products/prodact-card-02_@2x.webp 2x, ./img/products/prodact-card-02_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-02.jpg 1x, ./img/products/prodact-card-02_@2x.jpg 2x, ./img/products/prodact-card-02_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-02.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Leviosa</h4>
@@ -439,7 +483,17 @@
 									<div class="card-product__bage_discount">-50%</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-03.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-03.webp 1x, ./img/products/prodact-card-03_@2x.webp 2x, ./img/products/prodact-card-03_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-03.jpg 1x, ./img/products/prodact-card-03_@2x.jpg 2x, ./img/products/prodact-card-03_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-03.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Lolito</h4>
@@ -472,7 +526,17 @@
 									<div class="card-product__bage_new">New</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-04.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-04.webp 1x, ./img/products/prodact-card-04_@2x.webp 2x, ./img/products/prodact-card-04_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-04.jpg 1x, ./img/products/prodact-card-04_@2x.jpg 2x, ./img/products/prodact-card-04_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-04.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Respira</h4>
@@ -503,7 +567,17 @@
 							<div data-id="5" class="card-product">
 								<div class="card-product__bage"></div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-05.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-05.webp 1x, ./img/products/prodact-card-05_@2x.webp 2x, ./img/products/prodact-card-05_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-05.jpg 1x, ./img/products/prodact-card-05_@2x.jpg 2x, ./img/products/prodact-card-05_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-05.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Grifo</h4>
@@ -536,7 +610,17 @@
 									<div class="card-product__bage_new">New</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-06.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-06.webp 1x, ./img/products/prodact-card-06_@2x.webp 2x, ./img/products/prodact-card-06_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-06.jpg 1x, ./img/products/prodact-card-06_@2x.jpg 2x, ./img/products/prodact-card-06_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-06.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Muggo</h4>
@@ -569,7 +653,17 @@
 									<div class="card-product__bage_discount">-50%</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-07.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-07.webp 1x, ./img/products/prodact-card-07_@2x.webp 2x, ./img/products/prodact-card-07_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-07.jpg 1x, ./img/products/prodact-card-07_@2x.jpg 2x, ./img/products/prodact-card-07_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-07.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Pingky</h4>
@@ -602,7 +696,17 @@
 									<div class="card-product__bage_new">New</div>
 								</div>
 								<a class="card-product__img" href="#!">
-									<img src="./img/prodact-card-08.jpg" alt="Product image" />
+									<picture>
+										<source
+											srcset="./img/products/prodact-card-08.webp 1x, ./img/products/prodact-card-08_@2x.webp 2x, ./img/products/prodact-card-08_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/products/prodact-card-08.jpg 1x, ./img/products/prodact-card-08_@2x.jpg 2x, ./img/products/prodact-card-08_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/products/prodact-card-08.jpg" alt="Image of product" width="285" height="301" />
+									</picture>
 								</a>
 								<div class="card-product__info card-info">
 									<h4 class="card-info__title">Potty</h4>
@@ -649,7 +753,17 @@
 						<div class="rooms__slider rooms-slider swiper">
 							<div class="rooms-slider__slides swiper-wrapper">
 								<div class="rooms-slider__slide swiper-slide">
-									<img src="./img/rooms/room-card-01.jpg" alt="Room image" class="rooms-slider__img" />
+									<picture>
+										<source
+											srcset="./img/rooms/room-card-01.webp 1x, ./img/rooms/room-card-01_@2x.webp 2x, ./img/rooms/room-card-01_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/rooms/room-card-01.jpg 1x, ./img/rooms/room-card-01_@2x.jpg 2x, ./img/rooms/room-card-01_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/rooms/room-card-01.jpg" alt="Room image" class="rooms-slider__img" />
+									</picture>
 									<div class="rooms-slider__content" data-swiper-parallax-opacity="0" data-swiper-parallax-y="-50%">
 										<a href="#!" class="card-info rooms-slider__info">
 											<p class="text-md rooms-slider__name">01 <span></span> Bed Room</p>
@@ -663,7 +777,17 @@
 									</div>
 								</div>
 								<div class="rooms-slider__slide swiper-slide">
-									<img src="./img/rooms/room-card-02.jpg" alt="Room image" class="rooms-slider__img" />
+									<picture>
+										<source
+											srcset="./img/rooms/room-card-02.webp 1x, ./img/rooms/room-card-02_@2x.webp 2x, ./img/rooms/room-card-02_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/rooms/room-card-02.jpg 1x, ./img/rooms/room-card-02_@2x.jpg 2x, ./img/rooms/room-card-02_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/rooms/room-card-02.jpg" alt="Room image" class="rooms-slider__img" />
+									</picture>
 									<div class="rooms-slider__content" data-swiper-parallax-opacity="0" data-swiper-parallax-y="-50%">
 										<a href="#!" class="card-info rooms-slider__info">
 											<p class="text-md rooms-slider__name">02 <span></span> Cozy Room</p>
@@ -677,7 +801,17 @@
 									</div>
 								</div>
 								<div class="rooms-slider__slide swiper-slide">
-									<img src="./img/rooms/room-card-03.jpg" alt="Room image" class="rooms-slider__img" />
+									<picture>
+										<source
+											srcset="./img/rooms/room-card-03.webp 1x, ./img/rooms/room-card-03_@2x.webp 2x, ./img/rooms/room-card-03_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/rooms/room-card-03.jpg 1x, ./img/rooms/room-card-03_@2x.jpg 2x, ./img/rooms/room-card-03_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/rooms/room-card-03.jpg" alt="Room image" class="rooms-slider__img" />
+									</picture>
 									<div class="rooms-slider__content" data-swiper-parallax-opacity="0" data-swiper-parallax-y="-50%">
 										<a href="#!" class="card-info rooms-slider__info">
 											<p class="text-md rooms-slider__name">03 <span></span> Office</p>
@@ -691,7 +825,17 @@
 									</div>
 								</div>
 								<div class="rooms-slider__slide swiper-slide">
-									<img src="./img/rooms/room-card-04.jpg" alt="Room image" class="rooms-slider__img" />
+									<picture>
+										<source
+											srcset="./img/rooms/room-card-04.webp 1x, ./img/rooms/room-card-04_@2x.webp 2x, ./img/rooms/room-card-04_@3x.webp 3x"
+											type="image/webp"
+										/>
+										<source
+											srcset="./img/rooms/room-card-04.jpg 1x, ./img/rooms/room-card-04_@2x.jpg 2x, ./img/rooms/room-card-04_@3x.jpg 3x"
+											type="image/jpeg"
+										/>
+										<img src="./img/rooms/room-card-04.jpg" alt="Room image" class="rooms-slider__img" />
+									</picture>
 									<div class="rooms-slider__content" data-swiper-parallax-opacity="0" data-swiper-parallax-y="-50%">
 										<a href="#!" class="card-info rooms-slider__info">
 											<p class="text-md rooms-slider__name">04 <span></span> Kitchen</p>
@@ -732,7 +876,17 @@
 							<div class="blog-slider__slides swiper-wrapper">
 								<div class="blog-slider__slide swiper-slide">
 									<a href="#!" class="blog-slider__img">
-										<img src="./img/blog/blog-card-01.jpg" alt="Blog image" />
+										<picture>
+											<source
+												srcset="./img/blog/blog-card-01.webp 1x, ./img/blog/blog-card-01_@2x.webp 2x, ./img/blog/blog-card-01_@3x.webp 3x"
+												type="image/webp"
+											/>
+											<source
+												srcset="./img/blog/blog-card-01.jpg 1x, ./img/blog/blog-card-01_@2x.jpg 2x, ./img/blog/blog-card-01_@3x.jpg 3x"
+												type="image/jpeg"
+											/>
+											<img src="./img/blog/blog-card-01.jpg" alt="Blog image" />
+										</picture>
 									</a>
 									<div class="blog-slider__info card-info">
 										<h4 class="blog-slider__title card-info__title">
@@ -744,7 +898,17 @@
 								</div>
 								<div class="blog-slider__slide swiper-slide">
 									<a href="#!" class="blog-slider__img">
-										<img src="./img/blog/blog-card-02.jpg" alt="Blog image" />
+										<picture>
+											<source
+												srcset="./img/blog/blog-card-02.webp 1x, ./img/blog/blog-card-02_@2x.webp 2x, ./img/blog/blog-card-02_@3x.webp 3x"
+												type="image/webp"
+											/>
+											<source
+												srcset="./img/blog/blog-card-02.jpg 1x, ./img/blog/blog-card-02_@2x.jpg 2x, ./img/blog/blog-card-02_@3x.jpg 3x"
+												type="image/jpeg"
+											/>
+											<img src="./img/blog/blog-card-02.jpg" alt="Blog image" />
+										</picture>
 									</a>
 									<div class="blog-slider__info card-info">
 										<h4 class="blog-slider__title card-info__title">
@@ -755,7 +919,17 @@
 								</div>
 								<div class="blog-slider__slide swiper-slide">
 									<a href="#!" class="blog-slider__img">
-										<img src="./img/blog/blog-card-03.jpg" alt="Blog image" />
+										<picture>
+											<source
+												srcset="./img/blog/blog-card-03.webp 1x, ./img/blog/blog-card-03_@2x.webp 2x, ./img/blog/blog-card-03_@3x.webp 3x"
+												type="image/webp"
+											/>
+											<source
+												srcset="./img/blog/blog-card-03.jpg 1x, ./img/blog/blog-card-03_@2x.jpg 2x, ./img/blog/blog-card-03_@3x.jpg 3x"
+												type="image/jpeg"
+											/>
+											<img src="./img/blog/blog-card-03.jpg" alt="Blog image" />
+										</picture>
 									</a>
 									<div class="blog-slider__info card-info">
 										<h4 class="blog-slider__title card-info__title">
@@ -768,7 +942,17 @@
 								</div>
 								<div class="blog-slider__slide swiper-slide">
 									<a href="#!" class="blog-slider__img">
-										<img src="./img/blog/blog-card-04.jpg" alt="Blog image" />
+										<picture>
+											<source
+												srcset="./img/blog/blog-card-04.webp 1x, ./img/blog/blog-card-04_@2x.webp 2x, ./img/blog/blog-card-04_@3x.webp 3x"
+												type="image/webp"
+											/>
+											<source
+												srcset="./img/blog/blog-card-04.jpg 1x, ./img/blog/blog-card-04_@2x.jpg 2x, ./img/blog/blog-card-04_@3x.jpg 3x"
+												type="image/jpeg"
+											/>
+											<img src="./img/blog/blog-card-04.jpg" alt="Blog image" />
+										</picture>
 									</a>
 									<div class="blog-slider__info card-info">
 										<h4 class="blog-slider__title card-info__title">
@@ -804,31 +988,281 @@
 						<div class="share__items">
 							<div class="share__column">
 								<div class="share__row share__row_left-top">
-									<a class="share__item" href="./img/share-gallery/share-gallery-09.jpg"><img src="./img/share-gallery/share-gallery-09.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-01.jpg"><img src="./img/share-gallery/share-gallery-01.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-02.jpg"><img src="./img/share-gallery/share-gallery-02.jpg" alt="Share image"/></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-09.jpg">
+										<picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-09.webp     1x,
+													./img/share-gallery/share-gallery-09_@2x.webp 2x,
+													./img/share-gallery/share-gallery-09_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-09.jpg     1x,
+													./img/share-gallery/share-gallery-09_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-09_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-09.jpg" alt="Share image" />
+										</picture>
+									</a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-01.jpg">
+										<picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-01.webp     1x,
+													./img/share-gallery/share-gallery-01_@2x.webp 2x,
+													./img/share-gallery/share-gallery-01_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-01.jpg     1x,
+													./img/share-gallery/share-gallery-01_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-01_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-01.jpg" alt="Share image" />
+										</picture>
+									</a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-02.jpg">
+										<picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-02.webp     1x,
+													./img/share-gallery/share-gallery-02_@2x.webp 2x,
+													./img/share-gallery/share-gallery-02_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-02.jpg     1x,
+													./img/share-gallery/share-gallery-02_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-02_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-02.jpg" alt="Share image" />
+										</picture>
+									</a>
 								</div>
 								<div class="share__row share__row_left-bottom">
-									<a class="share__item" href="./img/share-gallery/share-gallery-05.jpg"><img src="./img/share-gallery/share-gallery-05.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-03.jpg"><img src="./img/share-gallery/share-gallery-03.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-04.jpg"><img src="./img/share-gallery/share-gallery-04.jpg" alt="Share image"/></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-05.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-05.webp     1x,
+													./img/share-gallery/share-gallery-05_@2x.webp 2x,
+													./img/share-gallery/share-gallery-05_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-05.jpg     1x,
+													./img/share-gallery/share-gallery-05_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-05_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-05.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-03.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-03.webp     1x,
+													./img/share-gallery/share-gallery-03_@2x.webp 2x,
+													./img/share-gallery/share-gallery-03_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-03.jpg     1x,
+													./img/share-gallery/share-gallery-03_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-03_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-03.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-04.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-04.webp     1x,
+													./img/share-gallery/share-gallery-04_@2x.webp 2x,
+													./img/share-gallery/share-gallery-04_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-04.jpg     1x,
+													./img/share-gallery/share-gallery-04_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-04_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-04.jpg" alt="Share image" /> </picture
+									></a>
 								</div>
 							</div>
 							<div class="share__column">
 								<div class="share__row share__row_center">
-									<a class="share__item" href="./img/share-gallery/share-gallery-05.jpg"><img src="./img/share-gallery/share-gallery-05.jpg" alt="Share image"/></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-05.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-05.webp     1x,
+													./img/share-gallery/share-gallery-05_@2x.webp 2x,
+													./img/share-gallery/share-gallery-05_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-05.jpg     1x,
+													./img/share-gallery/share-gallery-05_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-05_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-05.jpg" alt="Share image" /> </picture
+									></a>
 								</div>
 							</div>
 							<div class="share__column">
 								<div class="share__row share__row_right-top">
-									<a class="share__item" href="./img/share-gallery/share-gallery-06.jpg"><img src="./img/share-gallery/share-gallery-06.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-07.jpg"><img src="./img/share-gallery/share-gallery-07.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-02.jpg"><img src="./img/share-gallery/share-gallery-02.jpg" alt="Share image"/></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-06.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-06.webp     1x,
+													./img/share-gallery/share-gallery-06_@2x.webp 2x,
+													./img/share-gallery/share-gallery-06_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-06.jpg     1x,
+													./img/share-gallery/share-gallery-06_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-06_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-06.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-07.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-07.webp     1x,
+													./img/share-gallery/share-gallery-07_@2x.webp 2x,
+													./img/share-gallery/share-gallery-07_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-07.jpg     1x,
+													./img/share-gallery/share-gallery-07_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-07_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-07.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-02.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-02.webp     1x,
+													./img/share-gallery/share-gallery-02_@2x.webp 2x,
+													./img/share-gallery/share-gallery-02_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-02.jpg     1x,
+													./img/share-gallery/share-gallery-02_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-02_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-02.jpg" alt="Share image" /> </picture
+									></a>
 								</div>
 								<div class="share__row share__row_right-bottom">
-									<a class="share__item" href="./img/share-gallery/share-gallery-08.jpg"><img src="./img/share-gallery/share-gallery-08.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-09.jpg"><img src="./img/share-gallery/share-gallery-09.jpg" alt="Share image"/></a>
-									<a class="share__item" href="./img/share-gallery/share-gallery-04.jpg"><img src="./img/share-gallery/share-gallery-04.jpg" alt="Share image"/></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-08.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-08.webp     1x,
+													./img/share-gallery/share-gallery-08_@2x.webp 2x,
+													./img/share-gallery/share-gallery-08_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-08.jpg     1x,
+													./img/share-gallery/share-gallery-08_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-08_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-08.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-09.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-09.webp     1x,
+													./img/share-gallery/share-gallery-09_@2x.webp 2x,
+													./img/share-gallery/share-gallery-09_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-09.jpg     1x,
+													./img/share-gallery/share-gallery-09_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-09_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-09.jpg" alt="Share image" /> </picture
+									></a>
+									<a class="share__item" href="./img/share-gallery/share-gallery-04.jpg"
+										><picture>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-04.webp     1x,
+													./img/share-gallery/share-gallery-04_@2x.webp 2x,
+													./img/share-gallery/share-gallery-04_@3x.webp 3x
+												"
+												type="image/webp"
+											/>
+											<source
+												srcset="
+													./img/share-gallery/share-gallery-04.jpg     1x,
+													./img/share-gallery/share-gallery-04_@2x.jpg 2x,
+													./img/share-gallery/share-gallery-04_@3x.jpg 3x
+												"
+												type="image/jpeg"
+											/>
+											<img src="./img/share-gallery/share-gallery-04.jpg" alt="Share image" /> </picture
+									></a>
 								</div>
 							</div>
 						</div>

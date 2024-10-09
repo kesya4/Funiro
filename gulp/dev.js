@@ -14,7 +14,7 @@ const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
 const typograf = require("gulp-typograf");
 const replace = require("gulp-replace");
-// const webpHTML = require('gulp-webp-retina-html');
+const webpHTML = require('gulp-webp-retina-html');
 const imageminWebp = require("imagemin-webp");
 const rename = require("gulp-rename");
 const prettier = require("@bdchauvette/gulp-prettier");
@@ -44,48 +44,42 @@ const plumberNotify = (title) => {
 };
 
 gulp.task("html:dev", function() {
-    return (
-        gulp
-            .src(["./src/html/**/*.html", "!./**/layout/**/*.*", "!./**/components/**/*.*"])
-            .pipe(changed("./build/", { hasChanged: changed.compareContents }))
-            .pipe(plumber(plumberNotify("HTML")))
-            .pipe(fileInclude(fileIncludeSetting))
-            .pipe(
-                replace(
-                    /(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-                    "$1./$4$5$7$1"
-                )
-            )
-            .pipe(
-                typograf({
-                    locale: ["ru", "en-US"],
-                    htmlEntity: { type: "digit" },
-                    safeTags: [
-                        ["<\\?php", "\\?>"],
-                        ["<no-typography>", "</no-typography>"],
-                    ],
-                })
-            )
-            // .pipe(
-            // 	webpHTML({
-            // 		extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-            // 		retina: {
-            // 			1: '',
-            // 			2: '@2x',
-            // 		},
-            // 	})
-            // )
-            .pipe(
-                prettier({
-                    tabWidth: 4,
-                    useTabs: true,
-                    printWidth: 182,
-                    trailingComma: "es5",
-                    bracketSpacing: false,
-                })
-            )
-            .pipe(gulp.dest("./build/"))
-    );
+    return gulp
+        .src(["./src/html/**/*.html", "!./**/layout/**/*.*", "!./**/components/**/*.*"])
+        .pipe(changed("./build/", { hasChanged: changed.compareContents }))
+        .pipe(plumber(plumberNotify("HTML")))
+        .pipe(fileInclude(fileIncludeSetting))
+        .pipe(replace(/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi, "$1./$4$5$7$1"))
+        .pipe(
+            typograf({
+                locale: ["ru", "en-US"],
+                htmlEntity: { type: "digit" },
+                safeTags: [
+                    ["<\\?php", "\\?>"],
+                    ["<no-typography>", "</no-typography>"],
+                ],
+            })
+        )
+        .pipe(
+            webpHTML({
+                extensions: ["jpg", "jpeg", "png", "gif", "webp"],
+                retina: {
+                    1: "",
+                    2: "_@2x",
+                    3: "_@3x",
+                },
+            })
+        )
+        .pipe(
+            prettier({
+                tabWidth: 4,
+                useTabs: true,
+                printWidth: 182,
+                trailingComma: "es5",
+                bracketSpacing: false,
+            })
+        )
+        .pipe(gulp.dest("./build/"));
 });
 
 gulp.task("sass:dev", function() {
@@ -109,7 +103,7 @@ gulp.task("sass:dev", function() {
 gulp.task("images:dev", function() {
     return (
         gulp
-            .src(["./src/img/**/*", "!./src/img/icons/**/*", "!./src/img/icons"])
+            .src(["./src/img/**/*.{jpg,jpeg,png}"])
             .pipe(changed("./build/img/"))
             .pipe(
                 imagemin([

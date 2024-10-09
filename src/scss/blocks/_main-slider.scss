@@ -99,7 +99,7 @@
 
     &__slide {
         position: relative;
-        width: auto !important;
+        // width: auto !important;
 
         @include lg {
             width: 100% !important;
@@ -109,8 +109,8 @@
     // .main-slider__img
 
     &__img {
-        @include clamp (width, 280px, 934px, 320px, 1440px);
-        aspect-ratio: 934 / 553;
+        // // @include clamp (width, 280px, 934px, 320px, 1440px);
+        // aspect-ratio: 934 / 553;
         @include lg {
             width: 100%;
         }
