@@ -35,6 +35,9 @@
 
     &__img {
         max-width: auto;
+        img {
+            width: 100%;
+        }
     }
 
     // .blog-slider__info

@@ -95,6 +95,11 @@
         transition: transform 0.4s ease-in-out;
         display: flex;
 
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
         path {
             stroke: var(--color-darkGray);
         }

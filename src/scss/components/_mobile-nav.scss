@@ -72,6 +72,17 @@
 
 		margin-top: 20px;
 		margin-bottom: 20px;
+
+
+	}
+	&__search-btn {
+		display: flex;
+		align-items: center;
+		svg {
+			width: 20px;
+			height: 20px;
+			stroke: #333333;
+		}
 	}
 
 	&__input {

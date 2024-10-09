@@ -36,7 +36,6 @@
         column-gap: 12px;
         background: var(--bg-color-white);
 
-
         @include lg {
             position: absolute;
             z-index: 5;
@@ -46,6 +45,16 @@
             visibility: hidden;
             transition: all 0.2s ease-in-out;
             box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 20px;
+            height: 20px;
+            stroke: #333333;
         }
     }
 
