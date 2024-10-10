@@ -47,7 +47,7 @@ export function initializeBlogSlider() {
         speed: 800,
         watchOverflow: true,
         parallax: true,
-        autoHeight: true,
+        // autoHeight: true,
 
         navigation: {
             nextEl: ".blog-slider__arrow_next",
