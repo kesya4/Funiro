@@ -28,7 +28,7 @@ export function initializeMainSlider() {
         breakpoints: {
             992: {
                 spaceBetween: 32,
-                initialSlide: 1,
+                // initialSlide: 1,
             },
         },
     });
