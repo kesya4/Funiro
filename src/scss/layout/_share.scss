@@ -33,18 +33,17 @@
         @media (hover:none) {
             overflow: auto;
             -webkit-overflow-scrolling: touch;
-        }
+            scrollbar-color: var(--bg-color-accent-orange) #f1f1f1;
 
-        &::-webkit-scrollbar-thumb {
-            background: var(--bg-color-accent-orange);
-            border-radius: 10px;
-        }
+            &::-webkit-scrollbar-thumb {
+                background: var(--bg-color-accent-orange);
+                border-radius: 10px;
+            }
 
-        &::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
         }
-
-        scrollbar-color: var(--bg-color-accent-orange) #f1f1f1;
     }
 
     // .share__items
