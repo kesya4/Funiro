@@ -79,7 +79,7 @@ export function initializeRoomsSlider() {
     const roomsSlider = new Swiper(".rooms-slider", {
         observeParents: true,
         observer: true,
-        loop: true,
+        // loop: true,
         slidesPerView: "auto",
         initialSlide: 1,
         spaceBetween: 24,
@@ -107,6 +107,7 @@ export function initializeRoomsSlider() {
                 slidesPerView: "auto",
                 spaceBetween: 24,
                 initialSlide: 1,
+                loop: true
             },
         },
     });

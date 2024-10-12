@@ -66,6 +66,7 @@
     // .rooms-slider__content
 
     &__content {
+        position: relative;
         display: flex;
         align-items: flex-end;
         width: 100%;
@@ -83,7 +84,7 @@
     &__info {
         width: 100%;
         padding: clamp(16px, 16px + 0.0071428571*(100vw - 320px), 24px);
-        z-index: 99;
+        z-index: 10;
         backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.72);
 
@@ -128,6 +129,12 @@
 
         svg {
             fill: var(--bg-color-white);
+        }
+
+        @include lg {
+            position: absolute;
+            right: 0;
+            z-index: 11;
         }
 
     }

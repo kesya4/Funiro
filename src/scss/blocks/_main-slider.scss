@@ -1,14 +1,15 @@
 .main-slider {
     display: flex !important;
     align-items: flex-end;
-    align-self: flex-end;
+    // align-self: flex-end;
     flex-direction: column;
     overflow: visible !important;
     gap: 22px;
-    margin-top: 26px;
+    margin-top: 52px;
     width: 100%;
 
     @include lg {
+        flex-direction: column-reverse;
         margin-top: 0;
         overflow: hidden !important;
     }
@@ -109,8 +110,8 @@
     // .main-slider__img
 
     &__img {
-        // // @include clamp (width, 280px, 934px, 320px, 1440px);
-        // aspect-ratio: 934 / 553;
+        aspect-ratio: 934 / 553;
+
         @include lg {
             width: 100%;
         }
