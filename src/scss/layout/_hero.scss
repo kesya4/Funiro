@@ -78,10 +78,19 @@
         @include clamp (padding-bottom, 10px, 24px, 320px, 1440px);
         @include clamp (font-size, 18px, 20px, 320px, 1440px);
 
+        &_bottom {
+            display: none !important;
+        }
+
         @include lg {
+            display: none !important;
             max-width: 245px;
             width: 100%;
             margin: 0 auto;
+
+            &_bottom {
+                display: flex !important;
+            }
         }
     }
 
