@@ -6,8 +6,6 @@ import { initMobileNav, UpdateMobileNav } from "./modules/mobile-nav.js";
 document.addEventListener("DOMContentLoaded", initMobileNav);
 window.addEventListener("resize", UpdateMobileNav);
 
-
-
 import subList from "./modules/sub-list.js";
 subList();
 
@@ -31,3 +29,8 @@ initializeRoomsSlider();
 
 import shareScrollBar from "./modules/share-scrollbar.js";
 document.addEventListener("DOMContentLoaded", shareScrollBar);
+
+import { updateNavScroll } from "./modules/nav.js";
+updateNavScroll();
+
+AOS.init();

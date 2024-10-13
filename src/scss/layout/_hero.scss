@@ -1,7 +1,8 @@
 .hero {
     position: relative;
     background-color: var(--bg-color-peach);
-
+    @include clamp (padding-top, 80px, 125px, 320px, 1440px);
+    
     @include lg {
         padding-bottom: 44px;
     }
@@ -12,7 +13,7 @@
         left: 0;
         bottom: 0;
         width: calc(964/1440 * 100%);
-        min-height: 800px;
+        height: 100%;
 
         background-color: #F9F1E7;
 
@@ -43,7 +44,6 @@
         background: rgba(255, 255, 255, 0.72);
         height: max-content;
         margin-top: 16px;
-        @include clamp (margin-bottom, 30px, 80px, 992px, 1440px);
 
         @include lg {
             margin-bottom: 0;
@@ -57,6 +57,7 @@
 
     &__title {
         @include clamp (font-size, 36px, 56px, 320px, 1440px);
+        margin: 0;
     }
 
     // .hero__text
@@ -74,8 +75,8 @@
     // .hero__btn
 
     &__btn {
-        @include clamp (padding-top, 10px, 24px, 320px, 1440px);
-        @include clamp (padding-bottom, 10px, 24px, 320px, 1440px);
+        @include clamp (padding-top, 10px, 22px, 320px, 1440px);
+        @include clamp (padding-bottom, 10px, 22px, 320px, 1440px);
         @include clamp (font-size, 18px, 20px, 320px, 1440px);
 
         &_bottom {

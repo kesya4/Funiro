@@ -13,8 +13,6 @@
     #{$max-value}px);
 }
 
-
-
 // Breakpoints
 @mixin xxl () {
     @media (max-width: 1439.98px) {
@@ -70,3 +68,5 @@
         @content;
     }
 }
+
+// Styles

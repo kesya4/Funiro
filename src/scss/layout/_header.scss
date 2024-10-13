@@ -1,13 +1,21 @@
 .header {
-	// position: absolute;
-	background-color: var(--bg-color-peach);
 	width: 100%;
 
 	&__wrapper {
+		display: flex;
+		align-items: center;
 		width: 100%;
-		// position: fixed;
-		@include clamp (padding-top, 20px, 40px, 320px, 1440px);
-		@include clamp (padding-bottom, 20px, 40px, 320px, 1440px);
+		position: fixed;
+		z-index: 99;
+		@include clamp (height, 80px, 125px, 320px, 1440px);
+
+		transition: all 0.3s ease-in-out;
+
+
+		&._scrolled {
+			background: rgba(255, 255, 255, 0.98);
+			@include clamp (height, 60px, 80px, 320px, 1440px);
+		}
 	}
 
 	// .header__logo
