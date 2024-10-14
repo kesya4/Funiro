@@ -5,7 +5,6 @@ const mobileNav = document.querySelector(".mobile-nav"),
 export function initMobileNav() {
     document.addEventListener("click", (e) => {
         const target = e.target;
-        closeMobileNav();
         // Mobile nav buttons
         if (target.classList.contains("mobile-menu_btn-open") || target.closest(".mobile-menu_btn-open")) {
             mobileNav.classList.add("_active");
@@ -20,6 +19,11 @@ export function initMobileNav() {
                 item.classList.remove("_active");
             });
         }
+        // Close after touch
+        if (target.closest(".mobile-nav") && !target.classList.contains("mobile-nav__link_drop") && !target.closest(".mobile-nav__search") && !target.closest(".mobile-nav__arrow")) {
+            mobileNav.classList.remove("_active");
+            htmlContainer.classList.remove("no-scroll");
+        }
         // No scroll on body
         if (mobileNav.classList.contains("_active")) {
             htmlContainer.classList.add("no-scroll");
@@ -29,20 +33,11 @@ export function initMobileNav() {
     });
 }
 
-function closeMobileNav() {
-    // Close after touch
-    mobileNav.addEventListener("click", (e) => {
-        const target = e.target;
-        if (target && (!target.classList.contains("mobile-nav__link_drop") && !target.closest(".mobile-nav__search"))) {
-            mobileNav.classList.remove("_active");
-        }
-    });
-}
-
 export function UpdateMobileNav() {
     if (!isMobile() && window.innerWidth >= 768) {
         if (mobileNav.classList.contains("_active")) {
             mobileNav.classList.remove("_active");
+            htmlContainer.classList.remove("no-scroll");
         }
     }
 }
