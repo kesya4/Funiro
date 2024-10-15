@@ -1,11 +1,11 @@
 .share {
-    @include clamp (padding-bottom, 85px, 40px, 1440px, 320px);
+    @include clamp (padding-bottom, 20px, 85px, 320px, 1440px);
 
     // .share__label
 
     &__label {
         font-weight: 600;
-        @include clamp (font-size, 20px, 16px, 320px, 1440px);
+        @include clamp (font-size, 16px, 20px, 320px, 1440px);
 
         line-height: 150%;
         text-align: center;
@@ -25,6 +25,8 @@
     &__body {
         position: relative;
         display: flex;
+        transition: all 0.3s ease-in-out;
+        will-change: transform;
 
         @media (hover:hover) {
             justify-content: center;
@@ -54,6 +56,7 @@
         grid-auto-flow: column;
         align-items: center;
         gap: 16px;
+        will-change: transform;
 
         @media (hover:none) {
             padding-bottom: 15px;

@@ -162,7 +162,7 @@
 
         &_favorite {
             svg {
-                stroke: var(--bg-color-darkGray);
+                fill: var(--bg-color-darkGray);
             }
         }
 
@@ -183,12 +183,12 @@
 
             &_favorite {
                 svg {
-                    stroke: var(--bg-color-white);
+                    fill: var(--bg-color-white);
                 }
 
                 &:hover {
                     svg {
-                        stroke: var(--bg-color-accent-orange);
+                        fill: var(--bg-color-accent-orange);
                     }
                 }
             }
@@ -204,7 +204,7 @@
 
                 &_favorite {
                     svg {
-                        stroke: var(--bg-color-accent-orange);
+                        fill: var(--bg-color-accent-orange);
                     }
                 }
             }
