@@ -13,8 +13,6 @@ window.addEventListener("resize", UpdateMobileNav);
 
 // -----Global----- //
 
-
-
 import subList from "./modules/sub-list.js";
 subList();
 
@@ -40,3 +38,4 @@ import shareScrollBar from "./modules/share-scrollbar.js";
 document.addEventListener("DOMContentLoaded", shareScrollBar);
 
 AOS.init();
+Fancybox.bind('[data-fancybox="share-gallery"]', {});

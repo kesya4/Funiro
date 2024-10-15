@@ -2,6 +2,18 @@ html {
 	height: 100%;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+
+	&.with-fancybox {
+
+		overflow-x: auto;
+
+		& body.hide-scrollbar {
+			margin-right: 0;
+			overflow: auto;
+		}
+	}
+
+
 }
 
 body {
@@ -9,7 +21,7 @@ body {
 	// height: 100%;
 	overflow-x: hidden;
 	flex-direction: column;
-	font-family: var(--font-main);
+	font-family: var(--font-main) !important;
 	// text-wrap: balance;
 
 }
@@ -25,7 +37,7 @@ svg {
 
 .title {
 	@include clamp (font-size, 32px, 40px, 320px, 1440px);
-	
+
 	font-weight: 700;
 	line-height: 120%;
 	color: var(--text-color-darkGray);

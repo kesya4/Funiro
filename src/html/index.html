@@ -9,21 +9,19 @@
             content="A Funiro furniture store with a wide range of sofas, armchairs, tables and chairs. Find the perfect furniture for your home at affordable prices. Fast delivery and high quality!"
         />
         <title>Funiro</title>
-        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/main.css" />
     </head>
 
     <body>
         @@include('layout/header.html')
         <main class="main">
-            @@include('layout/hero.html') 
-            @@include('layout/features.html') 
-            @@include('layout/products.html') 
-            @@include('layout/rooms.html') 
-            @@include('layout/blog.html')
+            @@include('layout/hero.html') @@include('layout/features.html') @@include('layout/products.html') @@include('layout/rooms.html') @@include('layout/blog.html')
             @@include('layout/share.html')
         </main>
         @@include('layout/footer.html')
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="./js/index.bundle.js"></script>
     </body>

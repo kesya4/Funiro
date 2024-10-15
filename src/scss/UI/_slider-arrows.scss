@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -19,7 +20,7 @@
     svg {
         width: 24px;
         height: 24px;
-        stroke: var(--bg-color-accent-orange);
+        fill: var(--bg-color-accent-orange);
         transition: all 0.3s ease-in-out;
     }
 
@@ -27,7 +28,7 @@
 
         &:hover {
             svg {
-                stroke: white;
+                fill: white;
             }
 
             background-color: var(--bg-color-accent-orange);
