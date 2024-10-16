@@ -95,7 +95,7 @@
 									<ul class="cart__list"></ul>
 								</div>
 							</div>
-							<a href="#" class="actions__avatar">
+							<a id="sign-open" href="#" class="actions__avatar">
 								<img src="./img/icons/avatar.svg" alt="Profile" />
 								<span class="visually-hidden">Open profile</span>
 							</a>
@@ -1421,5 +1421,37 @@
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="./js/index.bundle.js"></script>
+
+		<!-- Popups -->
+		<div class="overlay" id="overlay"></div>
+		<div class="sign-popup">
+			<button class="sign-popup__close">
+				<svg>
+					<use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
+				</svg>
+			</button>
+			<div class="title sign-popup__title">Log in</div>
+			<form class="sign-popup__form">
+				<div class="sign-popup__item">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required placeholder="Enter email" autocomplete="on" />
+				</div>
+				<div class="sign-popup__item">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required placeholder="Your password" autocomplete="off" minlength="4" maxlength="12" />
+				</div>
+				<div class="sign-popup__item">
+					<input type="checkbox" id="remember-me" name="remember-me" />
+					<label for="remember-me">Remember me</label>
+				</div>
+				<div class="sign-popup__item">
+					<button class="btn btn_orange" type="submit">Sign in</button>
+				</div>
+				<div class="sign-popup__item">
+					<a class="text-md" href="#">Forgot password?</a>
+					<a class="text-md" href="#">Register</a>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>

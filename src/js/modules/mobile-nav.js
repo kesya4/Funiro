@@ -8,8 +8,10 @@ export function initMobileNav() {
         // Mobile nav buttons
         if (target.classList.contains("mobile-menu_btn-open") || target.closest(".mobile-menu_btn-open")) {
             mobileNav.classList.add("_active");
+            htmlContainer.classList.add("no-scroll");
         } else if (target.classList.contains("mobile-menu_btn-close") || target.closest(".mobile-menu_btn-close")) {
             mobileNav.classList.remove("_active");
+            htmlContainer.classList.remove("no-scroll");
         }
         // Spoiler-menu
         if ((target.classList.contains("mobile-nav__item") || target.closest(".mobile-nav__item")) && target.closest(".mobile-nav__item").querySelector(".mobile-nav__arrow")) {
@@ -22,12 +24,6 @@ export function initMobileNav() {
         // Close after touch
         if (target.closest(".mobile-nav") && !target.classList.contains("mobile-nav__link_drop") && !target.closest(".mobile-nav__search") && !target.closest(".mobile-nav__arrow")) {
             mobileNav.classList.remove("_active");
-            htmlContainer.classList.remove("no-scroll");
-        }
-        // No scroll on body
-        if (mobileNav.classList.contains("_active")) {
-            htmlContainer.classList.add("no-scroll");
-        } else {
             htmlContainer.classList.remove("no-scroll");
         }
     });

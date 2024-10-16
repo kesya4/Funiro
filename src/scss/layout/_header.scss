@@ -6,7 +6,7 @@
 		align-items: center;
 		width: 100%;
 		position: fixed;
-		z-index: 99;
+		z-index: 50;
 		@include clamp (height, 80px, 125px, 320px, 1440px);
 
 		transition: all 0.3s ease-in-out;

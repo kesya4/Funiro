@@ -27,7 +27,8 @@
         display: flex;
         transition: all 0.3s ease-in-out;
         will-change: transform;
-
+        max-width: max-content;
+        margin: 0 auto;
         @media (hover:hover) {
             justify-content: center;
         }
