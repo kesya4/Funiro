@@ -36,12 +36,10 @@ svg {
 }
 
 .title {
-	@include clamp (font-size, 32px, 40px, 320px, 1440px);
-
 	font-weight: 700;
 	line-height: 120%;
 	color: var(--text-color-darkGray);
-
+	@include clamp (font-size, 32px, 40px, 320px, 1440px);
 	@include clamp (margin-bottom, 20px, 32px, 320px, 1440px);
 }
 

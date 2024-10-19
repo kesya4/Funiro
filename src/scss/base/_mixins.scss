@@ -12,7 +12,7 @@
     #{$min-value}px + #{$slope} * (100vw - #{$min-width}px),
     #{$max-value}px);
 }
-
+  
 // Breakpoints
 @mixin xxl () {
     @media (max-width: 1439.98px) {

@@ -2,7 +2,6 @@ const gulp = require("gulp");
 const fileInclude = require("gulp-file-include");
 const sass = require("gulp-sass")(require("sass"));
 const sassGlob = require("gulp-sass-glob");
-const server = require("gulp-server-livereload");
 const clean = require("gulp-clean");
 const fs = require("fs");
 const sourceMaps = require("gulp-sourcemaps");
@@ -14,12 +13,12 @@ const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
 const typograf = require("gulp-typograf");
 const replace = require("gulp-replace");
-const webpHTML = require('gulp-webp-retina-html');
+const webpHTML = require("gulp-webp-retina-html");
 const imageminWebp = require("imagemin-webp");
 const rename = require("gulp-rename");
 const prettier = require("@bdchauvette/gulp-prettier");
-
 const svgsprite = require("gulp-svg-sprite");
+const browserSync = require("browser-sync").create();
 
 gulp.task("clean:dev", function(done) {
     if (fs.existsSync("./build/")) {
@@ -79,7 +78,8 @@ gulp.task("html:dev", function() {
                 bracketSpacing: false,
             })
         )
-        .pipe(gulp.dest("./build/"));
+        .pipe(gulp.dest("./build/"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("sass:dev", function() {
@@ -90,14 +90,11 @@ gulp.task("sass:dev", function() {
         .pipe(sourceMaps.init())
         .pipe(sassGlob())
         .pipe(sass())
-        .pipe(
-            replace(
-                /(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-                "$1$2$3$4$6$1"
-            )
-        )
+        .pipe(replace(/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi, "$1$2$3$4$6$1"))
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest("./build/css/"));
+        .pipe(gulp.dest("./build/css/"))
+        .pipe(browserSync.stream());
+        
 });
 
 gulp.task("images:dev", function() {
@@ -118,6 +115,7 @@ gulp.task("images:dev", function() {
             .pipe(changed("./build/img/"))
             // .pipe(imagemin({ verbose: true }))
             .pipe(gulp.dest("./build/img/"))
+            .pipe(browserSync.stream())
     );
 });
 
@@ -164,19 +162,23 @@ const svgSymbol = {
 };
 
 gulp.task("svgStack:dev", function() {
+    console.log("Запуск svgStack:dev...");
     return gulp
         .src("./src/img/icons/**/*.svg")
         .pipe(plumber(plumberNotify("SVG:dev")))
         .pipe(svgsprite(svgStack))
-        .pipe(gulp.dest("./build/img/svgsprite/"));
+        .pipe(gulp.dest("./build/img/svgsprite/"))
+        .pipe(browserSync.stream())
 });
 
 gulp.task("svgSymbol:dev", function() {
+    console.log("Запуск svgSymbol:dev...");
     return gulp
         .src("./src/img/icons/**/*.svg")
         .pipe(plumber(plumberNotify("SVG:dev")))
         .pipe(svgsprite(svgSymbol))
-        .pipe(gulp.dest("./build/img/svgsprite/"));
+        .pipe(gulp.dest("./build/img/svgsprite/"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("files:dev", function() {
@@ -195,16 +197,15 @@ gulp.task("js:dev", function() {
             // .pipe(babel())
             .pipe(webpack(require("./../webpack.config.js")))
             .pipe(gulp.dest("./build/js/"))
+            .pipe(browserSync.stream())
     );
 });
 
-const serverOptions = {
-    livereload: true,
-    open: true,
-};
-
 gulp.task("server:dev", function() {
-    return gulp.src("./build/").pipe(server(serverOptions));
+    browserSync.init({
+        server: "./build/",
+        notify: true, // Отключить уведомления
+    });
 });
 
 gulp.task("watch:dev", function() {

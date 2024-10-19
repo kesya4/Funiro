@@ -2,24 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlayContainer = document.querySelector(".overlay");
     const signPopup = document.querySelector(".sign-popup");
     const signPopupClose = document.querySelector(".sign-popup__close");
-    const signPopupOpen = document.querySelector("#sign-open");
-    const htmlContainer = document.querySelector("html");
+    const signPopupOpen = document.querySelectorAll("#sign-open");
 
     function popupOpen() {
-        overlayContainer.style.display = "block";
+        overlayContainer.classList.add("_active");
         signPopup.classList.add("_active");
     }
 
     function popupClose() {
-        overlayContainer.style.display = "none";
+        overlayContainer.classList.remove("_active");
         signPopup.classList.remove("_active");
     }
 
-    signPopupOpen.addEventListener("click", function(event) {
-        const target = event.target;
-        if (target.closest("img") || target === signPopupOpen) {
+    signPopupOpen.forEach((elem) => {
+        elem.addEventListener("click", () => {
             popupOpen();
-        }
+        });
     });
 
     signPopupClose.addEventListener("click", function(event) {

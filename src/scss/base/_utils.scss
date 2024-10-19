@@ -17,24 +17,28 @@
 
 .overlay {
 	position: fixed;
-	/* Sit on top of the page content */
-	display: none;
-	/* Hidden by default */
-	width: 100%;
-	/* Full width (cover the whole page) */
-	height: 100%;
-	/* Full height (cover the whole page) */
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	/* Black background with opacity */
+	/* Пример полупрозрачного черного фона */
+	opacity: 0;
+	/* Начальное значение opacity */
+	visibility: hidden;
+	/* Скрыть элемент */
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	/* Плавный переход */
 	z-index: 98;
-	/* Specify a stack order in case you're using a different order for other elements */
-	cursor: auto;
-	/* Add a pointer on hover */
+	/* Убедитесь, что оверлей выше других элементов */
+
+	&._active {
+		opacity: 1;
+		visibility: visible;
+	}
 }
+
+
 
 .no-scroll {
 	overflow-y: hidden;

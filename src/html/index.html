@@ -21,14 +21,18 @@
             @@include('layout/share.html')
         </main>
         @@include('layout/footer.html')
+
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="./js/index.bundle.js"></script>
+        <script src="./js/index.bundle.js" defer></script>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
 
         <!-- Popups -->
-        <div class="overlay" id="overlay"></div>
         <div class="sign-popup">
             <button class="sign-popup__close">
+                <span class="visually-hidden">Close sign in window</span>
                 <svg>
                     <use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
                 </svg>
@@ -55,6 +59,40 @@
                     <a class="text-md" href="#">Register</a>
                 </div>
             </form>
+        </div>
+        <div class="cart-popup">
+            <button class="cart-popup__close">
+                <span class="visually-hidden">Close cart</span>
+                <svg>
+                    <use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
+                </svg>
+            </button>
+            <h2 class="cart-popup_title title">Cart</h2>
+            <div class="cart-popup__list">
+                <div class="cart-product">
+                    <button type="button" class="cart-product__close">
+                        <span class="visually-hidden">Remove product from cart</span>
+                        <svg>
+                            <use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
+                        </svg>
+                    </button>
+                    <img src="../../img/products/prodact-card-01.jpg" alt="IMAGE" class="cart-product__img" />
+                    <div class="cart-product__info">
+                        <div class="cart-product__name">
+                            <h3 class="cart-product__title">Lolito</h3>
+                            <p class="text-md cart-product__subtitle">Luxury big sofa</p>
+                        </div>
+                        <div class="cart-product__details">
+                            <div class="cart-product__counter">
+                                <button type="button" class="btn btn_orange cart-product__control cart-product__control_minus"><span class="visually-hidden">Add one count of product</span>-</button>
+                                <span class="text-md cart-product__count"></span>
+                                <button type="button" class="btn btn_orange cart-product__control cart-product__control_plus"><span class="visually-hidden">Remove one count of product</span>+</button>
+                            </div>
+                            <div class="cart-product__price">Rp 7.000.000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

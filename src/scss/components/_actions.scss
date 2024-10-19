@@ -32,7 +32,7 @@
         @media (hover:none) {
             &:active {
                 svg {
-                    stroke: var(--accent-orange);
+                    fill: var(--accent-orange);
                 }
             }
         }

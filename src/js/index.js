@@ -38,6 +38,5 @@ AOS.init();
 Fancybox.bind('[data-fancybox="share-gallery"]', {});
 
 import "./modules/shareGallery.js";
-
 import "./modules/signPopup.js";
-
+import "./modules/cartPopup.js";

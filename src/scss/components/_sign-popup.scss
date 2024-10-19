@@ -8,7 +8,7 @@
     transform: translate(-50%, -50%) scale(0);
     @include clamp (width, 280px, 420px, 320px, 1440px);
     @include clamp (padding, 20px, 50px, 320px, 1440px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     opacity: 0;
 
     &._active {

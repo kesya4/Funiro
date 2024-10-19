@@ -29,6 +29,7 @@
         will-change: transform;
         max-width: max-content;
         margin: 0 auto;
+
         @media (hover:hover) {
             justify-content: center;
         }
@@ -57,6 +58,7 @@
         grid-auto-flow: column;
         align-items: center;
         gap: 16px;
+        flex-wrap: wrap;
         will-change: transform;
 
         @media (hover:none) {
@@ -69,7 +71,10 @@
     &__column {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         gap: 16px;
+        max-width: max-content;
+        width: 100%;
 
         &:first-child {
             justify-content: flex-end;
@@ -84,6 +89,8 @@
         flex-wrap: wrap;
         grid-template-columns: auto;
         grid-auto-flow: column;
+        max-width: max-content;
+        width: 100%;
         // .share__row_left-top
 
         &_left-top {
@@ -124,15 +131,19 @@
     &__item {
         width: max-content;
 
-        @media (hover:hover) {
-            img {
-                transition: all 0.3s ease-in-out;
-                filter: grayscale(1);
+        img {
+            width: 100%;
+        }
 
-                &:hover {
-                    filter: grayscale(0);
+            @media (hover:hover) {
+                img {
+                    transition: all 0.3s ease-in-out;
+                    filter: grayscale(1);
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
                 }
             }
         }
     }
-}
