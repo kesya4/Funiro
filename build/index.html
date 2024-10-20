@@ -9,6 +9,7 @@
 			content="A Funiro furniture store with a wide range of sofas, armchairs, tables and chairs. Find the perfect furniture for your home at affordable prices. Fast delivery and high quality!"
 		/>
 		<title>Funiro</title>
+		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./css/main.css" />
@@ -464,7 +465,7 @@
 									<h3 class="card-info__title">Syltherine</h3>
 									<p class="card-info__desc text-md">Stylish cafe chair</p>
 									<div class="card-info__price">
-										Rp&#160;2.500.000
+										<div class="card-info__price_current">Rp&#160;2.500.000</div>
 										<div class="card-info__price_old">Rp&#160;3.500.000</div>
 									</div>
 								</div>
@@ -507,7 +508,7 @@
 									<h3 class="card-info__title">Leviosa</h3>
 									<p class="card-info__desc text-md">Stylish cafe chair</p>
 									<div class="card-info__price">
-										Rp&#160;2.500.000
+										<div class="card-info__price_current">Rp&#160;2.500.000</div>
 										<div class="card-info__price_old"></div>
 									</div>
 								</div>
@@ -550,7 +551,7 @@
 									<h3 class="card-info__title">Lolito</h3>
 									<p class="card-info__desc text-md">Luxury big sofar</p>
 									<div class="card-info__price">
-										Rp&#160;7.000.000
+										<div class="card-info__price_current">Rp&#160;7.000.000</div>
 										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
@@ -593,7 +594,7 @@
 									<h3 class="card-info__title">Respira</h3>
 									<p class="card-info__desc text-md">Minimalist fan</p>
 									<div class="card-info__price">
-										Rp&#160;500.000
+										<div class="card-info__price_current">Rp&#160;500.000</div>
 										<div class="card-info__price_old"></div>
 									</div>
 								</div>
@@ -634,7 +635,7 @@
 									<h3 class="card-info__title">Grifo</h3>
 									<p class="card-info__desc text-md">Night lamp</p>
 									<div class="card-info__price">
-										Rp&#160;1.500.000
+										<div class="card-info__price_current">Rp&#160;1.500.000</div>
 										<div class="card-info__price_old"></div>
 									</div>
 								</div>
@@ -677,7 +678,7 @@
 									<h3 class="card-info__title">Muggo</h3>
 									<p class="card-info__desc text-md">Small mug</p>
 									<div class="card-info__price">
-										Rp&#160;150.000
+										<div class="card-info__price_current">Rp&#160;150.000</div>
 										<div class="card-info__price_old"></div>
 									</div>
 								</div>
@@ -720,7 +721,7 @@
 									<h3 class="card-info__title">Pingky</h3>
 									<p class="card-info__desc text-md">Cute bed set</p>
 									<div class="card-info__price">
-										Rp&#160;7.000.000
+										<div class="card-info__price_current">Rp&#160;7.000.000</div>
 										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
@@ -763,7 +764,7 @@
 									<h3 class="card-info__title">Potty</h3>
 									<p class="card-info__desc text-md">Minimalist flower pot</p>
 									<div class="card-info__price">
-										Rp&#160;500.000
+										<div class="card-info__price_current">Rp&#160;500.000</div>
 										<div class="card-info__price_old">Rp&#160;14.000.000</div>
 									</div>
 								</div>
@@ -1459,45 +1460,8 @@
 				</svg>
 			</button>
 			<h2 class="cart-popup_title title">Cart</h2>
-			<div class="cart-popup__list">
-				<div class="cart-product">
-					<button type="button" class="cart-product__close">
-						<span class="visually-hidden">Remove product from cart</span>
-						<svg>
-							<use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
-						</svg>
-					</button>
-					<picture>
-						<source
-							srcset="./img/products/prodact-card-01.webp 1x, ./img/products/prodact-card-01_@2x.webp 2x, ./img/products/prodact-card-01_@3x.webp 3x"
-							type="image/webp"
-						/>
-						<source
-							srcset="./img/products/prodact-card-01.jpg 1x, ./img/products/prodact-card-01_@2x.jpg 2x, ./img/products/prodact-card-01_@3x.jpg 3x"
-							type="image/jpeg"
-						/>
-						<img src="./img/products/prodact-card-01.jpg" alt="IMAGE" class="cart-product__img" />
-					</picture>
-					<div class="cart-product__info">
-						<div class="cart-product__name">
-							<h3 class="cart-product__title">Lolito</h3>
-							<p class="text-md cart-product__subtitle">Luxury big sofa</p>
-						</div>
-						<div class="cart-product__details">
-							<div class="cart-product__counter">
-								<button type="button" class="btn btn_orange cart-product__control cart-product__control_minus">
-									<span class="visually-hidden">Add one count of&#160;product</span>-
-								</button>
-								<span class="text-md cart-product__count"></span>
-								<button type="button" class="btn btn_orange cart-product__control cart-product__control_plus">
-									<span class="visually-hidden">Remove one count of&#160;product</span>+
-								</button>
-							</div>
-							<div class="cart-product__price">Rp&#160;7.000.000</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="text-md cart-popup__notification">Your cart is&#160;empty</div>
+			<div class="cart-popup__list"></div>
 		</div>
 	</body>
 </html>

@@ -9,6 +9,7 @@
             content="A Funiro furniture store with a wide range of sofas, armchairs, tables and chairs. Find the perfect furniture for your home at affordable prices. Fast delivery and high quality!"
         />
         <title>Funiro</title>
+        <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <link rel="stylesheet" href="./css/main.css" />
@@ -68,31 +69,8 @@
                 </svg>
             </button>
             <h2 class="cart-popup_title title">Cart</h2>
-            <div class="cart-popup__list">
-                <div class="cart-product">
-                    <button type="button" class="cart-product__close">
-                        <span class="visually-hidden">Remove product from cart</span>
-                        <svg>
-                            <use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
-                        </svg>
-                    </button>
-                    <img src="../../img/products/prodact-card-01.jpg" alt="IMAGE" class="cart-product__img" />
-                    <div class="cart-product__info">
-                        <div class="cart-product__name">
-                            <h3 class="cart-product__title">Lolito</h3>
-                            <p class="text-md cart-product__subtitle">Luxury big sofa</p>
-                        </div>
-                        <div class="cart-product__details">
-                            <div class="cart-product__counter">
-                                <button type="button" class="btn btn_orange cart-product__control cart-product__control_minus"><span class="visually-hidden">Add one count of product</span>-</button>
-                                <span class="text-md cart-product__count"></span>
-                                <button type="button" class="btn btn_orange cart-product__control cart-product__control_plus"><span class="visually-hidden">Remove one count of product</span>+</button>
-                            </div>
-                            <div class="cart-product__price">Rp 7.000.000</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="text-md cart-popup__notification">Your cart is empty</div>
+            <div class="cart-popup__list"></div>
         </div>
     </body>
 </html>
