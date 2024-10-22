@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         overlayContainer.classList.remove("_active");
         signPopup.classList.remove("_active");
     }
-
     signPopupOpen.forEach((elem) => {
         elem.addEventListener("click", () => {
             popupOpen();

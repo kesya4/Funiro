@@ -1,4 +1,7 @@
 .cart-popup {
+    display: flex;
+    flex-direction: column;
+    
     position: fixed;
     opacity: 0;
     top: 0;
@@ -23,7 +26,13 @@
 
 
     @include sm {
+        width: 80%;
+
+    }
+
+    @include x-sm {
         width: 100%;
+        min-width: auto;
     }
 
     &._active {
@@ -66,10 +75,20 @@
     }
 
     &__notification {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: 20px;
         font-weight: 700;
         line-height: 120%;
         font-size: clamp(32px, 32px + 0.0071428571*(100vw - 320px), 40px);
+
+        svg {
+            fill: var(--bg-color-gray);
+            width: 50px;
+            height: 50px;
+        }
     }
 
     // .cart-popup__item
@@ -137,7 +156,7 @@
     &__subtitle {}
 
     &__title {
-        @include clamp (font-size, 22px, 24px, 320px, 1440px);
+        @include clamp (font-size, 20px, 24px, 320px, 1440px);
         font-weight: 600;
         line-height: 110%;
     }

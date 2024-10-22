@@ -1,7 +1,7 @@
 import isMobile from "./utils/isMobile";
 
 const mobileNav = document.querySelector(".mobile-nav"),
-    htmlContainer = document.querySelector("html");
+      htmlContainer = document.querySelector("html");
 export function initMobileNav() {
     document.addEventListener("click", (e) => {
         const target = e.target;

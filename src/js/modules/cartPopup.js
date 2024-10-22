@@ -1,6 +1,4 @@
-// import isMobile from "./utils/isMobile";
-
-document.addEventListener("DOMContentLoaded", () => {
+function cartActions() {
     const cartContainer = document.querySelector(".cart-popup");
     const cartButtonOpen = document.querySelectorAll(".cart-open");
     const cartButtonClose = document.querySelector(".cart-popup__close");
@@ -13,9 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (target.closest(".cart-popup") && !target.closest(".cart-product")) {
             cartClose();
         }
-    });
-    overlayContainer.addEventListener("click", () => {
-        cartClose();
     });
 
     function cartOpen() {
@@ -42,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = event.target;
         let countValue, minusBtn;
 
-        // Проверяем, нажали ли на кнопку увеличения или уменьшения
         if (target.classList.contains("cart-product__control_plus") || target.classList.contains("cart-product__control_minus")) {
             const controlsContainer = target.closest(".cart-product__counter");
             countValue = controlsContainer.querySelector(".cart-product__count");
@@ -70,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cartListContainer = document.querySelector(".cart-popup__list");
     const addProductBtn = document.querySelectorAll(".card-product__btn");
+    console.log(cartListContainer);
+    console.log(addProductBtn);
 
     const productInfo = {}; // Object with newly added card
 
@@ -100,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 minusBtn.classList.remove("_disabled");
             } else {
                 renderProductInCart();
+                updateCartIconItemCount();
+                updateCartInfo();
             }
 
             // Remove
@@ -112,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         const target = event.target;
                         const targetProduct = btn.closest(".cart-product");
                         targetProduct.remove();
+                        updateCartIconItemCount();
+                        updateCartInfo();
                     });
                 });
             }
@@ -148,4 +148,28 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         cartListContainer.append(div);
     }
-});
+
+    function updateCartIconItemCount() {
+        const cartProduct = document.querySelectorAll(".cart-product");
+        const cartCounterItems = document.querySelectorAll(".cart-counter__value");
+        cartCounterItems.forEach((item) => {
+            item.textContent = cartProduct.length;
+        });
+    }
+
+    function updateCartInfo() {
+        const cartProduct = document.querySelectorAll(".cart-product");
+        const cartTitle = document.querySelector(".cart-popup_title");
+        const cartMessage = document.querySelector(".cart-popup__notification");
+
+        if (cartProduct.length === 0) {
+            cartTitle.style.display = "none";
+            cartMessage.style.display = "flex";
+        } else {
+            cartTitle.style.display = "block";
+            cartMessage.style.display = "none";
+        }
+    }
+    updateCartInfo();
+}
+export default cartActions;

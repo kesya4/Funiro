@@ -85,14 +85,15 @@
 									<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
 								</svg>
 							</button>
-							<button class="cart-open actions__cart" href="#" class="cart_icon">
+							<button class="actions__cart cart-counter cart-open" href="#" class="cart_icon">
 								<span class="visually-hidden">Open cart</span>
 								<svg preserveAspectRatio="xMidYMid meet">
 									<use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
 								</svg>
+								<div class="cart-counter__value">0</div>
 							</button>
 							<a id="sign-open" href="#" class="actions__avatar">
-								<img src="./img/icons/avatar.svg" alt="Profile" />
+								<img src="./img/icons/avatar.svg" alt="Profile" / width="40" height="40">
 								<span class="visually-hidden">Open profile</span>
 							</a>
 						</div>
@@ -188,11 +189,12 @@
 					<div class="mobile-nav__footer">
 						<a href="#" class="mobile-nav__footer-link cart-open">
 							Cart
-							<button class="counter mobile-nav__cart" href="#">
+							<button class="cart-counter mobile-nav__cart" href="#">
 								<span class="visually-hidden">Open your cart</span>
 								<svg>
 									<use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
 								</svg>
+								<div class="cart-counter__value">0</div>
 							</button>
 						</a>
 						<a href="#" class="mobile-nav__footer-link">
@@ -441,352 +443,7 @@
 				<div class="container">
 					<div class="products">
 						<h2 class="products__title title">Our Products</h2>
-						<div class="products__cards">
-							<div data-id="1" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_new">New</div>
-
-									<div class="card-product__bage_discount">-30%</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-01.webp 1x, ./img/products/prodact-card-01_@2x.webp 2x, ./img/products/prodact-card-01_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-01.jpg 1x, ./img/products/prodact-card-01_@2x.jpg 2x, ./img/products/prodact-card-01_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-01.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Syltherine</h3>
-									<p class="card-info__desc text-md">Stylish cafe chair</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;2.500.000</div>
-										<div class="card-info__price_old">Rp&#160;3.500.000</div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="2" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_discount">-30%</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-02.webp 1x, ./img/products/prodact-card-02_@2x.webp 2x, ./img/products/prodact-card-02_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-02.jpg 1x, ./img/products/prodact-card-02_@2x.jpg 2x, ./img/products/prodact-card-02_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-02.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Leviosa</h3>
-									<p class="card-info__desc text-md">Stylish cafe chair</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;2.500.000</div>
-										<div class="card-info__price_old"></div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="3" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_discount">-50%</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-03.webp 1x, ./img/products/prodact-card-03_@2x.webp 2x, ./img/products/prodact-card-03_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-03.jpg 1x, ./img/products/prodact-card-03_@2x.jpg 2x, ./img/products/prodact-card-03_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-03.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Lolito</h3>
-									<p class="card-info__desc text-md">Luxury big sofar</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;7.000.000</div>
-										<div class="card-info__price_old">Rp&#160;14.000.000</div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="4" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_new">New</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-04.webp 1x, ./img/products/prodact-card-04_@2x.webp 2x, ./img/products/prodact-card-04_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-04.jpg 1x, ./img/products/prodact-card-04_@2x.jpg 2x, ./img/products/prodact-card-04_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-04.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Respira</h3>
-									<p class="card-info__desc text-md">Minimalist fan</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;500.000</div>
-										<div class="card-info__price_old"></div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="5" class="card-product">
-								<div class="card-product__bage"></div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-05.webp 1x, ./img/products/prodact-card-05_@2x.webp 2x, ./img/products/prodact-card-05_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-05.jpg 1x, ./img/products/prodact-card-05_@2x.jpg 2x, ./img/products/prodact-card-05_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-05.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Grifo</h3>
-									<p class="card-info__desc text-md">Night lamp</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;1.500.000</div>
-										<div class="card-info__price_old"></div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="6" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_new">New</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-06.webp 1x, ./img/products/prodact-card-06_@2x.webp 2x, ./img/products/prodact-card-06_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-06.jpg 1x, ./img/products/prodact-card-06_@2x.jpg 2x, ./img/products/prodact-card-06_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-06.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Muggo</h3>
-									<p class="card-info__desc text-md">Small mug</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;150.000</div>
-										<div class="card-info__price_old"></div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="7" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_discount">-50%</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-07.webp 1x, ./img/products/prodact-card-07_@2x.webp 2x, ./img/products/prodact-card-07_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-07.jpg 1x, ./img/products/prodact-card-07_@2x.jpg 2x, ./img/products/prodact-card-07_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-07.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Pingky</h3>
-									<p class="card-info__desc text-md">Cute bed set</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;7.000.000</div>
-										<div class="card-info__price_old">Rp&#160;14.000.000</div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-							<div data-id="8" class="card-product">
-								<div class="card-product__bage">
-									<div class="card-product__bage_new">New</div>
-								</div>
-								<a class="card-product__img" href="#">
-									<picture>
-										<source
-											srcset="./img/products/prodact-card-08.webp 1x, ./img/products/prodact-card-08_@2x.webp 2x, ./img/products/prodact-card-08_@3x.webp 3x"
-											type="image/webp"
-										/>
-										<source
-											srcset="./img/products/prodact-card-08.jpg 1x, ./img/products/prodact-card-08_@2x.jpg 2x, ./img/products/prodact-card-08_@3x.jpg 3x"
-											type="image/jpeg"
-										/>
-										<img src="./img/products/prodact-card-08.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
-									</picture>
-								</a>
-								<div class="card-product__info card-info">
-									<h3 class="card-info__title">Potty</h3>
-									<p class="card-info__desc text-md">Minimalist flower pot</p>
-									<div class="card-info__price">
-										<div class="card-info__price_current">Rp&#160;500.000</div>
-										<div class="card-info__price_old">Rp&#160;14.000.000</div>
-									</div>
-								</div>
-								<div class="card-product__actions">
-									<button class="card-product__btn btn">Add to&#160;cart</button>
-									<div class="card-product__links">
-										<a href="#!" class="card-product__link card-product__link_share">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#share-icon"></use>
-											</svg>
-											Share
-										</a>
-										<a href="#!" class="card-product__link card-product__link_favorite">
-											<svg>
-												<use href="./img/svgsprite/sprite.symbol.svg#favorites"></use>
-											</svg>
-											Like
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
+						<div class="products__cards"></div>
 						<button type="button" class="btn products__btn-more" aria-label="Show more product cards">Show More</button>
 					</div>
 				</div>
@@ -1359,7 +1016,7 @@
 							<ul class="nav-footer__list">
 								<li class="nav-footer__item"><a href="#" class="nav-footer__link">My&#160;Account</a></li>
 								<li class="nav-footer__item"><a href="#" class="nav-footer__link">Checkout</a></li>
-								<li class="nav-footer__item"><a href="#" class="nav-footer__link">My&#160;Cart</a></li>
+								<li class="nav-footer__item cart-open"><a href="#" class="nav-footer__link">My&#160;Cart</a></li>
 								<li class="nav-footer__item"><a href="#" class="nav-footer__link">My&#160;catalog</a></li>
 							</ul>
 						</div>
@@ -1460,7 +1117,12 @@
 				</svg>
 			</button>
 			<h2 class="cart-popup_title title">Cart</h2>
-			<div class="text-md cart-popup__notification">Your cart is&#160;empty</div>
+			<div class="text-md cart-popup__notification">
+				Your cart is&#160;empty
+				<svg>
+					<use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+				</svg>
+			</div>
 			<div class="cart-popup__list"></div>
 		</div>
 	</body>

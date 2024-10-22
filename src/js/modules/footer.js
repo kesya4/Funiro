@@ -1,7 +1,6 @@
 import isMobile from './utils/isMobile';
 
 function footerNav () {
-    document.addEventListener('DOMContentLoaded', function (e) {
         document.addEventListener('click', function (e) { 
             const target = e.target;
             const spollersContainer = target.closest('[data-spollers]');
@@ -17,7 +16,6 @@ function footerNav () {
                 }
             }
         })
-    })
 }
 
 export default footerNav;

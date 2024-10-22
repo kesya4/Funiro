@@ -1,42 +1,43 @@
 // -----Global----- //
-
-// Anchors Scroll ---
+// Data
+import products from "./data/products.js";
+// Utils
+import "./modules/utils/overlay.js";
 import initSmoothScroll from "./modules/utils/anchorScroll.js";
-document.addEventListener("DOMContentLoaded", initSmoothScroll(".header__wrapper"));
-// Navigation fixed + scroll ---
+// Navigation
 import { updateNavScroll } from "./modules/navigation.js";
-updateNavScroll();
-// Mobile navigation ---
 import { initMobileNav, UpdateMobileNav } from "./modules/mobile-nav.js";
-document.addEventListener("DOMContentLoaded", initMobileNav);
-window.addEventListener("resize", UpdateMobileNav);
-
-// -----Global----- //
-
+// Sliders
+import { initializeMainSlider, initializeBlogSlider, initializeRoomsSlider } from "./modules/utils/swiperSlider.js";
+// Other modules
 import subList from "./modules/sub-list.js";
-subList();
-
 import search from "./modules/search.js";
-search();
-
 import footerNav from "./modules/footer.js";
-footerNav();
-
-import prodactsShow from "./modules/products-show.js";
-prodactsShow();
-
-import { initializeMainSlider } from "./modules/utils/swiperSlider.js";
-initializeMainSlider();
-
-import { initializeBlogSlider } from "./modules/utils/swiperSlider.js";
-initializeBlogSlider();
-
-import { initializeRoomsSlider } from "./modules/utils/swiperSlider.js";
-initializeRoomsSlider();
-
-AOS.init();
-Fancybox.bind('[data-fancybox="share-gallery"]', {});
-
+import { renderProductCards } from "./modules/products.js";
+import cartActions from "./modules/cartPopup.js";
 import "./modules/shareGallery.js";
 import "./modules/signPopup.js";
-import "./modules/cartPopup.js";
+
+// -----Initialization----- //
+document.addEventListener("DOMContentLoaded", () => {
+    initSmoothScroll(".header__wrapper");
+    updateNavScroll();
+    initMobileNav();
+    subList();
+    search();
+    footerNav();
+    const productsContainer = document.querySelector(".products__cards");
+    renderProductCards(products, productsContainer); 
+    cartActions();
+    initializeMainSlider();
+    initializeBlogSlider();
+    initializeRoomsSlider();
+
+    // AOS and Fancybox initialization
+    AOS.init();
+    Fancybox.bind('[data-fancybox="share-gallery"]', {});
+});
+
+window.addEventListener("resize", () => {
+    UpdateMobileNav();
+});
