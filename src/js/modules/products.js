@@ -51,15 +51,39 @@ function appendProductCard(productCard, container) {
     container.append(productCard);
 }
 
-function renderProductCards(products, container) {
-    const fragment = document.createDocumentFragment(); 
+let firstProductIndex = 0;
+let lastProductIndex = 4;
 
-    products.forEach((product) => {
+export function renderProductCards(products, container) {
+    const fragment = document.createDocumentFragment();
+
+    const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
+
+    productsOnPage.forEach((product) => {
         const card = renderProductCard(product);
-        fragment.append(card); 
+        fragment.append(card);
     });
 
-    container.append(fragment); 
+    container.append(fragment);
 }
 
-export { renderProductCards };
+export function showMoreProducts(products, container) {
+    const btnShow = document.querySelector(".products__btn-more");
+    const showIncrement = 2;
+
+    btnShow.addEventListener("click", () => {
+        if (lastProductIndex >= products.length) {
+            btnShow.style.display = "none";
+        }
+
+        firstProductIndex = lastProductIndex;
+        lastProductIndex += showIncrement;
+
+        renderProductCards(products, container);
+        AOS.refresh();
+        
+        if (lastProductIndex >= products.length) {
+            btnShow.style.display = "none";
+        }
+    });
+}
