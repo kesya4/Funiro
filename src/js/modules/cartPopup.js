@@ -4,8 +4,16 @@ function cartActions() {
     const cartButtonClose = document.querySelector(".cart-popup__close");
     const overlayContainer = document.querySelector(".overlay");
     const cartListContainer = document.querySelector(".cart-popup__list");
+    const productCardsContainer = document.querySelector(".products__cards");
+    // Close with touch
+    cartContainer.addEventListener("click", (event) => {
+        const target = event.target;
 
-    // Открытие и закрытие корзины
+        if (target.closest(".cart-popup") && !target.closest(".cart-product")) {
+            cartClose();
+        }
+    });
+
     cartButtonOpen.forEach((elem) => {
         elem.addEventListener("click", cartOpen);
     });
@@ -20,20 +28,18 @@ function cartActions() {
         cartContainer.classList.remove("_active");
         overlayContainer.classList.remove("_active");
     }
-
-    // Делегирование событий для добавления продуктов в корзину
-    document.querySelector(".products__cards").addEventListener("click", (event) => {
+    
+    productCardsContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("card-product__btn")) {
             const targetProduct = event.target.closest(".card-product");
             const productInfo = {
-                image: targetProduct.querySelector("img").src,
                 name: targetProduct.querySelector(".card-info__title").textContent,
                 desc: targetProduct.querySelector(".card-info__desc").textContent,
                 price: targetProduct.querySelector(".card-info__price_current").textContent,
                 id: targetProduct.getAttribute("data-id"),
             };
             handleAddToCart(productInfo);
-            cartOpen(); // Открытие корзины после добавления
+            cartOpen();
         }
     });
 
@@ -53,7 +59,6 @@ function cartActions() {
         updateCartInfo();
     }
 
-    // Рендеринг продукта в корзину
     function renderProductInCart(productInfo) {
         const div = document.createElement("div");
         div.classList.add("cart-product");
@@ -65,7 +70,15 @@ function cartActions() {
                     <use href="./img/svgsprite/sprite.symbol.svg#close-icon"></use>
                 </svg>
             </button>
-            <img src="${productInfo.image}" alt="IMAGE" class="cart-product__img" />
+            <picture>
+				<source srcset="
+					./img/products/prodact-card-0${productInfo.id}.webp     1x,
+					./img/products/prodact-card-0${productInfo.id}_@2x.webp 2x,
+					./img/products/prodact-card-0${productInfo.id}_@3x.webp 3x
+				" type="image/webp">
+				<source srcset="./img/products/prodact-card-0${productInfo.id}.jpg 1x, ./img/products/prodact-card-0${productInfo.id}_@2x.jpg 2x, ./img/products/prodact-card-0${productInfo.id}_@3x.jpg 3x" type="image/jpeg">
+				<img src="./img/products/prodact-card-0${productInfo.id}.jpg" alt="IMAGE" class="cart-product__img" loading="lazy"/ width="110" height="117">
+			</picture>
             <div class="cart-product__info">
                 <div class="cart-product__name">
                     <h3 class="cart-product__title">${productInfo.name}</h3>

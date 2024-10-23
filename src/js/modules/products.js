@@ -16,7 +16,15 @@ function renderProductCard(product) {
             ${badges}
         </div>
         <a class="card-product__img" href="#">
-            <img src="../../img/products/prodact-card-${product.img}.jpg" alt="Image of product" width="285" height="301" loading="lazy" />
+        <picture>
+			<source srcset="
+				./img/products/prodact-card-${product.img}.webp     1x,
+				./img/products/prodact-card-${product.img}_@2x.webp 2x,
+				./img/products/prodact-card-${product.img}_@3x.webp 3x
+			" type="image/webp">
+			<source srcset="./img/products/prodact-card-${product.img}.jpg 1x, ./img/products/prodact-card-${product.img}_@2x.jpg 2x, ./img/products/prodact-card-${product.img}_@3x.jpg 3x" type="image/jpeg">
+			<img src="./img/products/prodact-card-${product.img}.jpg" alt="${product.title}" width="285" height="301" loading="lazy" />
+        </picture>
         </a>
         <div class="card-product__info card-info">
             <h3 class="card-info__title">${product.title}</h3>
@@ -81,7 +89,7 @@ export function showMoreProducts(products, container) {
 
         renderProductCards(products, container);
         AOS.refresh();
-        
+
         if (lastProductIndex >= products.length) {
             btnShow.style.display = "none";
         }
