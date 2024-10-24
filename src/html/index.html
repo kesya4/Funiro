@@ -9,7 +9,7 @@
             content="A Funiro furniture store with a wide range of sofas, armchairs, tables and chairs. Find the perfect furniture for your home at affordable prices. Fast delivery and high quality!"
         />
         <title>Funiro</title>
-        <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <link rel="stylesheet" href="./css/main.css" />
@@ -69,12 +69,18 @@
                 </svg>
             </button>
             <h2 class="cart-popup_title title">Cart</h2>
-            <div class="text-md cart-popup__notification">Your cart is empty
+            <div class="text-md cart-popup__notification">
+                Your cart is empty
                 <svg>
-                <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
+                    <use href="./img/svgsprite/sprite.symbol.svg#cart"></use>
                 </svg>
             </div>
             <div class="cart-popup__list"></div>
+            <div class="cart-popup__order">
+                <span class="cart-popup__order-text">Total </span>
+                <span class="cart-popup__order-sum">0</span>
+            </div>
+            <button class="btn btn_orange cart-popup__btn-order">Place an order</button>
         </div>
     </body>
 </html>

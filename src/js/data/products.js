@@ -8,6 +8,7 @@ const products = [
         priceOld: "Rp 3.500.000",
         bageNew: true,
         bageDiscount: "-30%",
+        dataPrice: "2500000",
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const products = [
         priceOld: "",
         bageNew: false,
         bageDiscount: "-30%",
+        dataPrice: "2500000",
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ const products = [
         priceOld: "Rp 14.000.000",
         bageNew: false,
         bageDiscount: "-50%",
+        dataPrice: "7000000",
     },
     {
         id: 4,
@@ -38,6 +41,7 @@ const products = [
         priceOld: "",
         bageNew: true,
         bageDiscount: "",
+        dataPrice: "500000",
     },
     {
         id: 5,
@@ -48,6 +52,7 @@ const products = [
         priceOld: "",
         bageNew: false,
         bageDiscount: "",
+        dataPrice: "1500000",
     },
     {
         id: 6,
@@ -58,6 +63,7 @@ const products = [
         priceOld: "",
         bageNew: true,
         bageDiscount: "",
+        dataPrice: "150000",
     },
     {
         id: 7,
@@ -68,6 +74,7 @@ const products = [
         priceOld: "Rp 14.000.000",
         bageNew: false,
         bageDiscount: "-50%",
+        dataPrice: "7000000",
     },
     {
         id: 8,
@@ -78,6 +85,7 @@ const products = [
         priceOld: "Rp 14.000.000",
         bageNew: true,
         bageDiscount: "",
+        dataPrice: "500000",
     },
 ];
 

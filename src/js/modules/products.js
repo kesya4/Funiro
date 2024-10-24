@@ -30,7 +30,7 @@ function renderProductCard(product) {
             <h3 class="card-info__title">${product.title}</h3>
             <p class="card-info__desc text-md">${product.description}</p>
             <div class="card-info__price">
-                <div class="card-info__price_current">${product.price}</div>
+                <div data-price="${product.dataPrice}" class="card-info__price_current">${product.price}</div>
                 <div class="card-info__price_old">${product.priceOld}</div>
             </div>
         </div>

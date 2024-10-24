@@ -1,5 +1,6 @@
 .hero {
     position: relative;
+    overflow-x: hidden;
     background-color: var(--bg-color-peach);
     @include clamp (padding-top, 80px, 125px, 320px, 1440px);
     

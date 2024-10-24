@@ -5,6 +5,22 @@ function cartActions() {
     const overlayContainer = document.querySelector(".overlay");
     const cartListContainer = document.querySelector(".cart-popup__list");
     const productCardsContainer = document.querySelector(".products__cards");
+
+    // function getScrollbarWidth() {
+    //     let div = document.createElement("div");
+    //     div.style.width = "100px";
+    //     div.style.height = "100px";
+    //     div.style.overflowY = "scroll";
+    //     div.style.visibility = "hidden";
+    //     document.documentElement.append(div);
+    //     let scrollbarWidth = div.offsetWidth - div.clientWidth;
+    //     div.remove();
+    //     return scrollbarWidth;
+    // }
+
+    // const scroll = getScrollbarWidth();
+    // console.log(scroll);
+
     // Close with touch
     cartContainer.addEventListener("click", (event) => {
         const target = event.target;
@@ -20,15 +36,21 @@ function cartActions() {
     cartButtonClose.addEventListener("click", cartClose);
 
     function cartOpen() {
+        // console.log(scroll);
+        //     document.documentElement.style.overflow = "hidden";
+        //     document.documentElement.style.marginRight = `${scroll}px`;
         cartContainer.classList.add("_active");
         overlayContainer.classList.add("_active");
     }
 
     function cartClose() {
+        // console.log(scroll);
+        //     document.documentElement.style.overflow = "";
+        //     document.documentElement.style.marginRight = `0px`;
         cartContainer.classList.remove("_active");
         overlayContainer.classList.remove("_active");
     }
-    
+
     productCardsContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("card-product__btn")) {
             const targetProduct = event.target.closest(".card-product");
@@ -36,10 +58,12 @@ function cartActions() {
                 name: targetProduct.querySelector(".card-info__title").textContent,
                 desc: targetProduct.querySelector(".card-info__desc").textContent,
                 price: targetProduct.querySelector(".card-info__price_current").textContent,
+                dataPrice: targetProduct.querySelector(".card-info__price_current").getAttribute("data-price"),
                 id: targetProduct.getAttribute("data-id"),
             };
             handleAddToCart(productInfo);
             cartOpen();
+            calculateTotalCartValue();
         }
     });
 
@@ -90,7 +114,7 @@ function cartActions() {
                         <span class="text-md cart-product__count">1</span>
                         <button type="button" class="btn btn_orange cart-product__control cart-product__control_plus">+</button>
                     </div>
-                    <div class="cart-product__price">${productInfo.price}</div>
+                    <div class="cart-product__price" data-price="${productInfo.dataPrice}">${productInfo.price}</div>
                 </div>
             </div>
         `;
@@ -104,6 +128,7 @@ function cartActions() {
             cartProduct.remove();
             updateCartIconItemCount();
             updateCartInfo();
+            calculateTotalCartValue();
         });
 
         cartProduct.addEventListener("click", (event) => {
@@ -113,8 +138,10 @@ function cartActions() {
 
             if (target.classList.contains("cart-product__control_plus")) {
                 countValue.textContent = parseInt(countValue.textContent, 10) + 1;
+                calculateTotalCartValue();
             } else if (target.classList.contains("cart-product__control_minus") && parseInt(countValue.textContent, 10) > 1) {
                 countValue.textContent = parseInt(countValue.textContent, 10) - 1;
+                calculateTotalCartValue();
             }
 
             minusBtn.classList.toggle("_disabled", parseInt(countValue.textContent) === 1);
@@ -133,17 +160,41 @@ function cartActions() {
         const cartProduct = document.querySelectorAll(".cart-product");
         const cartTitle = document.querySelector(".cart-popup_title");
         const cartMessage = document.querySelector(".cart-popup__notification");
+        const cartOrderInfo = document.querySelector(".cart-popup__order");
+        const cartBtn = document.querySelector(".cart-popup__btn-order");
 
         if (cartProduct.length === 0) {
             cartTitle.style.display = "none";
+            cartOrderInfo.style.display = "none";
+            cartBtn.style.display = "none";
+
             cartMessage.style.display = "flex";
         } else {
             cartTitle.style.display = "block";
+            cartOrderInfo.style.display = "flex";
+            cartBtn.style.display = "flex";
             cartMessage.style.display = "none";
         }
     }
-
     updateCartInfo();
+
+    function calculateTotalCartValue() {
+        const cartProducts = document.querySelectorAll(".cart-product");
+        const cartTotalValue = document.querySelector(".cart-popup__order-sum");
+
+        let totalCartValue = 0;
+
+        cartProducts.forEach((product) => {
+            const productCount = product.querySelector(".cart-product__count");
+            const productPrice = product.querySelector(".cart-product__price").getAttribute("data-price");
+
+            const productTotalPrice = parseInt(productPrice) * parseInt(productCount.textContent);
+            totalCartValue += productTotalPrice;
+        });
+        const formattedTotalValue = totalCartValue.toLocaleString("de-DE"); // Используем локаль для Германии
+        cartTotalValue.textContent = formattedTotalValue + " Rp";
+    }
+    calculateTotalCartValue();
 }
 
 export default cartActions;
