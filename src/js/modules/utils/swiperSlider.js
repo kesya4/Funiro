@@ -1,20 +1,24 @@
-// import Swiper bundle with all modules installed
-import Swiper from "swiper/bundle";
-// import styles bundle
-import "swiper/css/bundle";
+// // import Swiper bundle with all modules installed
+// import Swiper from "swiper/bundle";
+// // import styles bundle
+// import "swiper/css/bundle";
 
 // mainSlider
 export function initializeMainSlider() {
     const mainSlider = new Swiper(".main-slider", {
+        direction: "horizontal",
         observeParents: true,
         observer: true,
         loop: true,
         slidesPerView: "auto",
         spaceBetween: 20,
-        speed: 800,
+        speed: 1000,
         watchOverflow: true,
         parallax: true,
-
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".main-slider__arrow_next",
             prevEl: ".main-slider__arrow_prev",
@@ -32,7 +36,7 @@ export function initializeMainSlider() {
             },
         },
     });
-
+    document.querySelector(".main-slider").style.opacity = "1";
     return mainSlider;
 }
 
@@ -44,11 +48,14 @@ export function initializeBlogSlider() {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        speed: 800,
+        speed: 1000,
         watchOverflow: true,
         parallax: true,
         // autoHeight: true,
-
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".blog-slider__arrow_next",
             prevEl: ".blog-slider__arrow_prev",
@@ -83,7 +90,7 @@ export function initializeRoomsSlider() {
         slidesPerView: "auto",
         initialSlide: 1,
         spaceBetween: 24,
-        speed: 800,
+        speed: 900,
         watchOverflow: true,
         parallax: true,
 
@@ -107,7 +114,7 @@ export function initializeRoomsSlider() {
                 slidesPerView: "auto",
                 spaceBetween: 24,
                 initialSlide: 1,
-                loop: true
+                loop: true,
             },
         },
     });
