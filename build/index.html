@@ -12,7 +12,7 @@
 		<link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="script" />
+		<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="preload" href="./css/main.css" as="style" />
 		<link rel="stylesheet" href="./css/main.css" />
@@ -265,6 +265,7 @@
 								<div class="main-slider__slide swiper-slide">
 									<picture>
 										<source
+											media="(min-width: 768px)"
 											srcset="
 												./img/main-slider/main-slider-01.webp     1x,
 												./img/main-slider/main-slider-01_@2x.webp 2x,
@@ -273,10 +274,38 @@
 											type="image/webp"
 										/>
 										<source
-											srcset="./img/main-slider/main-slider-01.jpg 1x, ./img/main-slider/main-slider-01_@2x.jpg 2x, ./img/main-slider/main-slider-01_@3x.jpg 3x"
+											media="(min-width: 768px)"
+											srcset="
+												./img/main-slider/main-slider-01.jpeg     1x,
+												./img/main-slider/main-slider-01_@2x.jpeg 2x,
+												./img/main-slider/main-slider-01_@3x.jpeg 3x
+											"
 											type="image/jpeg"
 										/>
-										<img src="./img/main-slider/main-slider-01.jpg" alt="Luxury big sofa" class="main-slider__img" width="934" height="553" loading="lazy" />
+										<source
+											srcset="
+												./img/main-slider/main-slider-01-small.webp     1x,
+												./img/main-slider/main-slider-01-small_@2x.webp 2x,
+												./img/main-slider/main-slider-01-small_@3x.webp 3x
+											"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./img/main-slider/main-slider-01-small.jpeg     1x,
+												./img/main-slider/main-slider-01-small_@2x.jpeg 2x,
+												./img/main-slider/main-slider-01-small_@3x.jpeg 3x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											src="./img/main-slider/main-slider-01-small.jpg"
+											alt="Luxury big sofa"
+											class="main-slider__img"
+											width="280"
+											height="166"
+											loading="lazy"
+										/>
 									</picture>
 									<a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#" class="link-wrapper"></a>  -->
@@ -298,6 +327,7 @@
 								<div class="main-slider__slide swiper-slide">
 									<picture>
 										<source
+											media="(min-width: 768px)"
 											srcset="
 												./img/main-slider/main-slider-02.webp     1x,
 												./img/main-slider/main-slider-02_@2x.webp 2x,
@@ -306,10 +336,38 @@
 											type="image/webp"
 										/>
 										<source
-											srcset="./img/main-slider/main-slider-02.jpg 1x, ./img/main-slider/main-slider-02_@2x.jpg 2x, ./img/main-slider/main-slider-02_@3x.jpg 3x"
+											media="(min-width: 768px)"
+											srcset="
+												./img/main-slider/main-slider-02.jpeg     1x,
+												./img/main-slider/main-slider-02_@2x.jpeg 2x,
+												./img/main-slider/main-slider-02_@3x.jpeg 3x
+											"
 											type="image/jpeg"
 										/>
-										<img src="./img/main-slider/main-slider-02.jpg" alt="Luxury big sofa 2-seat" class="main-slider__img" width="934" height="553" />
+										<source
+											srcset="
+												./img/main-slider/main-slider-02-small.webp     1x,
+												./img/main-slider/main-slider-02-small_@2x.webp 2x,
+												./img/main-slider/main-slider-02-small_@3x.webp 3x
+											"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./img/main-slider/main-slider-02-small.jpeg     1x,
+												./img/main-slider/main-slider-02-small_@2x.jpeg 2x,
+												./img/main-slider/main-slider-02-small_@3x.jpeg 3x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											src="./img/main-slider/main-slider-02-small.jpg"
+											alt="Luxury big sofa"
+											class="main-slider__img"
+											width="280"
+											height="166"
+											loading="lazy"
+										/>
 									</picture>
 									<a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#" class="link-wrapper"></a>  -->
@@ -331,6 +389,7 @@
 								<div class="main-slider__slide swiper-slide">
 									<picture>
 										<source
+											media="(min-width: 768px)"
 											srcset="
 												./img/main-slider/main-slider-03.webp     1x,
 												./img/main-slider/main-slider-03_@2x.webp 2x,
@@ -339,10 +398,38 @@
 											type="image/webp"
 										/>
 										<source
-											srcset="./img/main-slider/main-slider-03.jpg 1x, ./img/main-slider/main-slider-03_@2x.jpg 2x, ./img/main-slider/main-slider-03_@3x.jpg 3x"
+											media="(min-width: 768px)"
+											srcset="
+												./img/main-slider/main-slider-03.jpeg     1x,
+												./img/main-slider/main-slider-03_@2x.jpeg 2x,
+												./img/main-slider/main-slider-03_@3x.jpeg 3x
+											"
 											type="image/jpeg"
 										/>
-										<img src="./img/main-slider/main-slider-03.jpg" alt="Luxury big sofa" class="main-slider__img" width="934" height="553" loading="lazy" />
+										<source
+											srcset="
+												./img/main-slider/main-slider-03-small.webp     1x,
+												./img/main-slider/main-slider-03-small_@2x.webp 2x,
+												./img/main-slider/main-slider-03-small_@3x.webp 3x
+											"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./img/main-slider/main-slider-03-small.jpeg     1x,
+												./img/main-slider/main-slider-03-small_@2x.jpeg 2x,
+												./img/main-slider/main-slider-03-small_@3x.jpeg 3x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											src="./img/main-slider/main-slider-03-small.jpg"
+											alt="Luxury big sofa"
+											class="main-slider__img"
+											width="280"
+											height="166"
+											loading="lazy"
+										/>
 									</picture>
 									<a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#" class="link-wrapper"></a>  -->
@@ -364,6 +451,7 @@
 								<div class="main-slider__slide swiper-slide">
 									<picture>
 										<source
+											media="(min-width: 768px)"
 											srcset="
 												./img/main-slider/main-slider-04.webp     1x,
 												./img/main-slider/main-slider-04_@2x.webp 2x,
@@ -372,10 +460,38 @@
 											type="image/webp"
 										/>
 										<source
-											srcset="./img/main-slider/main-slider-04.jpg 1x, ./img/main-slider/main-slider-04_@2x.jpg 2x, ./img/main-slider/main-slider-04_@3x.jpg 3x"
+											media="(min-width: 768px)"
+											srcset="
+												./img/main-slider/main-slider-04.jpeg     1x,
+												./img/main-slider/main-slider-04_@2x.jpeg 2x,
+												./img/main-slider/main-slider-04_@3x.jpeg 3x
+											"
 											type="image/jpeg"
 										/>
-										<img src="./img/main-slider/main-slider-04.jpg" alt="Luxury big sofa" class="main-slider__img" width="934" height="553" loading="lazy" />
+										<source
+											srcset="
+												./img/main-slider/main-slider-04-small.webp     1x,
+												./img/main-slider/main-slider-04-small_@2x.webp 2x,
+												./img/main-slider/main-slider-04-small_@3x.webp 3x
+											"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./img/main-slider/main-slider-04-small.jpeg     1x,
+												./img/main-slider/main-slider-04-small_@2x.jpeg 2x,
+												./img/main-slider/main-slider-04-small_@3x.jpeg 3x
+											"
+											type="image/jpeg"
+										/>
+										<img
+											src="./img/main-slider/main-slider-04-small.jpg"
+											alt="Luxury big sofa"
+											class="main-slider__img"
+											width="280"
+											height="166"
+											loading="lazy"
+										/>
 									</picture>
 									<a href="#" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="main-slider__info">
 										<!-- <!-- <a href="#" class="link-wrapper"></a>  -->
