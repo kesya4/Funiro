@@ -7,7 +7,7 @@ import initSmoothScroll from "./modules/utils/anchorScroll.js";
 // Navigation
 import { updateNavScroll } from "./modules/navigation.js";
 import { initMobileNav, UpdateMobileNav } from "./modules/mobile-nav.js";
-// Sliders
+// Slider
 import { initializeMainSlider, initializeBlogSlider, initializeRoomsSlider } from "./modules/utils/swiperSlider.js";
 // Other modules
 import subList from "./modules/sub-list.js";
