@@ -64,6 +64,44 @@
         @media (hover:none) {
             padding-bottom: 15px;
         }
+
+        & [id="1"] {
+            @include clamp (width, 192px, 274px, 320px, 1440px);
+        }
+
+        & [id="2"] {
+            @include clamp (width, 316px, 451px, 320px, 1440px);
+        }
+
+        & [id="3"] {
+
+            @include clamp (width, 267px, 381px, 320px, 1440px);
+        }
+
+        & [id="4"] {
+            width: 241px;
+            @include clamp (width, 241px, 344px, 320px, 1440px);
+        }
+
+        & [id="5"] {
+            @include clamp (width, 207px, 295px, 320px, 1440px);
+        }
+
+        & [id="6"] {
+            @include clamp (width, 203px, 290px, 320px, 1440px);
+        }
+
+        & [id="7"] {
+            @include clamp (width, 298px, 425px, 320px, 1440px);
+        }
+
+        & [id="8"] {
+            @include clamp (width, 125px, 178px, 320px, 1440px);
+        }
+
+        & [id="9"] {
+            @include clamp (width, 181px, 258px, 320px, 1440px);
+        }
     }
 
     // .share__column
@@ -71,7 +109,6 @@
     &__column {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         gap: 16px;
         max-width: max-content;
         width: 100%;
@@ -84,12 +121,8 @@
     // .share__row
 
     &__row {
-        display: inline-grid;
+        display: flex;
         gap: 16px;
-        flex-wrap: wrap;
-        grid-template-columns: auto;
-        grid-auto-flow: column;
-        max-width: max-content;
         width: 100%;
         // .share__row_left-top
 
@@ -135,15 +168,15 @@
             width: 100%;
         }
 
-            @media (hover:hover) {
-                img {
-                    transition: all 0.3s ease-in-out;
-                    filter: grayscale(1);
+        @media (hover:hover) {
+            img {
+                transition: all 0.3s ease-in-out;
+                filter: grayscale(1);
 
-                    &:hover {
-                        filter: grayscale(0);
-                    }
+                &:hover {
+                    filter: grayscale(0);
                 }
             }
         }
     }
+}
