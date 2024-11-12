@@ -90,4 +90,4 @@ npm docs
 ```
 ## Support
 
-If you have any questions or suggestions, feel free to open an issue in the repository or contact me directly [email](mailto:kiselovtimofej@gmail.com) or [telegram](https://t.me/Mofeey).
+If you have any questions or suggestions, feel free to open an issue in the repository or contact me directly [email](mailto:kesya123321@gmail.com) or [telegram](https://t.me/Mofeey).
